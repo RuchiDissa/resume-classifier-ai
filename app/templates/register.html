@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+    <h1 class="h1m">Welcome</h1>
+        <p>Fill In All Information For Registrarion</p>
+    </div>
 
+    <div class="auth-container">
+        <form name="form1" action="" method="POST" target="_self">
+        <p><h2>Username:</h2><br/>
+        <input type="text" name="user" class="input"/></p>
+
+        <p><h2>Name:</h2></p>
+        <input type="text" name="name" class="input"/></p>
+
+        <p><h2>Email:</h2></p>
+        <input type="text" name="email" class="input"/></p>
+
+        <p><h2>Password:</h2><br/>
+        <input type="password" name="password" class="input"/></p>
+
+        <p><h2>Confirm Password:</h2><br/>
+        <input type="password" name="password" class="input"/></p>
+
+        <p>
+            <input type="checkbox" id="agree" name="agree" required>
+            I agree to the <a href="#">Privacy Policy</a>.
+        </p>
+
+            <p><input type="submit" value="Register" class="btn"/></p>
+        </form>
+    </div>
+
+    <footer>
+  <p>&copy; 2025</p>
+</footer>
+
+</body>
+</html>
