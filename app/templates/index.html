@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>AI Resume Classifier</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -7,6 +7,9 @@
 <body>
 <div class="container">
     <h1>Welcome to AI Resume Classifier and Job Role Matcher</h1>
+    <p>This Tool uses artificial intelligence to analyze and match candidates with appropriate job roles.</p>
+
+    <img src="{{ url_for('static', filename='images/welcome.png') }}" alt="Welcome Image" class="welcome-img">
 </div>
 
 <div class="auth-container">
@@ -16,5 +19,10 @@
     <h2>Register Here If You Do Not Have Account</h2>
     <a href="/register" class="btn">Register</a>
 </div>
+
+<footer>
+  <p>&copy; 2025</p>
+</footer>
+
 </body>
 </html>
