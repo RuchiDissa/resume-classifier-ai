@@ -25,6 +25,13 @@ p{
     margin-center: 10px;
 }
 
+.h1m {
+  font-size: 65px;
+  color: #134675;
+  margin: 30px 0 20px;
+  font-weight: bold;
+}
+
 h1 {
   color: #61dafb;
   margin-bottom: 20px;
@@ -71,4 +78,25 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
   color: #777;
+}
+
+.input {
+  width: 80%;
+  max-width: 400px;
+  padding: 12px 15px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  display: block;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  border-color: #61dafb;
+  box-shadow: 0 0 5px rgba(97, 218, 251, 0.7);
+  outline: none;
 }
