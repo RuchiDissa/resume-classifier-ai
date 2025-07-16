@@ -1,1 +1,30 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+    <h1 class="h1m">Welcome </h1>
+        <p>Fill in your login Information</p>
+    </div>
+
+    <div class="auth-container">
+        <form name="form1" action="" method="POST" target="_self">
+        <p><h2>Username:</h2><br/>
+        <input type="text" name="user" class="input"/></p>
+        <p><h2>Password:</h2><br/>
+        <input type="password" name="password" class="input"/></p>
+        <p><input type="submit" value="Login" class="btn"/></p>
+        </form>
+    </div>
+
+    <footer>
+  <p>&copy; 2025</p>
+</footer>
+
+</body>
+</html>
