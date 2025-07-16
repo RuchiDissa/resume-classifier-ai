@@ -1,13 +1,28 @@
 body {
-  background-color: #282c34;
+  background-color: white;
   font-family: Arial, sans-serif;
   color: #eee;
-  margin: 40px;
+  margin: 0px;
+  padding: 40px 0;
   text-align: center;
 }
 
+.welcome-img {
+  max-width: 80%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 0px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+
 .container {
   margin-bottom: 40px;
+}
+
+p{
+    color: black;
+    margin-center: 10px;
 }
 
 h1 {
@@ -16,17 +31,19 @@ h1 {
 }
 
 h2 {
-  color: #ccc;
+  color: #0f3150;
   margin: 20px 0 10px;
 }
 
 .auth-container {
-  display: inline-block;
-  background: #3c3f45;
-  padding: 30px 50px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  max-width: 400px;
+  width: 100%;
+  background: #d8e7f5;
+  padding: 30px 0px;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0,3);
+  box-sizing: border-box;
+  text-align: center;
+  margin: 30px 0;
 }
 
 .btn {
@@ -47,4 +64,11 @@ h2 {
 .btn:hover {
   background-color: #21a1f1;
   color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #777;
 }
