@@ -1,2 +1,23 @@
-16/07/2025 : Create homepage, login page, register page and set up backend control
-17/07/2025 : Upgrade backend codes and implement login and registration functionality and database connection to login + dashboard 
+🗓️ Project Development Log
+
+📅 16/07/2025
+Implemented:
+
+🌐 Created foundational pages:
+
+Homepage
+
+Login Page
+
+Register Page
+
+🛠️ Set up basic backend structure and control routing
+
+📅 17/07/2025
+Upgraded & Connected:
+
+🔐 Implemented login and registration functionality (frontend + backend)
+
+💾 Connected backend to the database (user auth)
+
+📊 Integrated login flow with user dashboard
