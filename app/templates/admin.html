@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+    <a href="{{ url_for('auth.logout') }}" class="btn">Logout</a>
+    <a href="{{ url_for('routes.add_user') }}" class="btn">➕ Add New User</a>
+
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>ID</th><th>Username</th><th>Email</th><th>Role</th><th>Status</th><th>Actions</th>
+      </tr>
+      {% for user in users %}
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>{{ 'Blocked' if user.blocked else 'Active' }}</td>
+        <td>
+          <a href="{{ url_for('routes.edit_user', user_id=user.id) }}">✏️ Edit</a> |
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</body>
+</html>
