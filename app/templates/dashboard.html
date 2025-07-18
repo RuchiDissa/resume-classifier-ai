@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
+<div class="container">
+    <h1 class="h1m">Dashboard</h1>
+    <h2>Welcome to Your AI Resume Classifier Dashboard</h2>
+    <p>This is where you can manage your resumes, view matched job roles, and track progress.</p>
+</div>
+
+<div class="auth-container">
+    <a href="#" class="btn">Upload Resume</a>
+    <a href="#" class="btn">View Job Matches</a>
+    <a href="{{ url_for('auth.logout') }}" class="btn">Logout</a>
+</div>
+
+{% if session['role'] == 'admin' %}
+    <a href="{{ url_for('routes.admin_dashboard') }}" class="btn">Admin Panel</a>
+{% endif %}
+
+    <footer>
+        <div class="left-align">
+            <a href="/about" class="homebtn">📇 About Us</a></div>
+        <p>&copy; All Right Reserved 2025</p>
+
+    </footer>
+
+</body>
+</html>
