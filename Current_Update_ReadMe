@@ -5,31 +5,21 @@
 🌐 Created foundational frontend pages:
 
 Homepage
-
 Login Page
-
 Register Page
 
 🛠️ Set up basic backend structure and routing control
 
 📅 17/07/2025 — Authentication Integration :
-
 🔐 Implemented full login and registration functionality (frontend & backend)
-
 💾 Connected backend to database for user authentication
-
 📊 Integrated login flow with user dashboard
 
 📅 18/07/2025 — Admin Panel Features :
 
 🛠️ Implemented full Admin Panel (frontend + backend)
-
 👥 Added user management table to view all users
-
 ➕ Enabled adding new users
-
 ✏️ Added user edit functionality
-
-🐞 Fixed bugs and UI issues
-
-😊 Enhanced UI with emoji support for user records
+⛔ Added button to access blcok and unblcok button on admin panel
+🗑️ Added delete functionality 
