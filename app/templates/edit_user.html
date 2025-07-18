@@ -6,20 +6,20 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div class="container">
+  <div class="auth-container">
     <h1>Edit User</h1>
     <form method="POST">
-      <label>Username:</label><br>
-      <input type="text" name="username" value="{{ user.username }}" required><br>
+      <label class="label">Username:</label><br>
+      <input class="input" type="text" name="username" value="{{ user.username }}" required><br>
 
-      <label>Name:</label><br>
-      <input type="text" name="name" value="{{ user.name }}" required><br>
+      <label class="label">Name:</label><br>
+      <input class="input" type="text" name="name" value="{{ user.name }}" required><br>
 
-      <label>Email:</label><br>
-      <input type="email" name="email" value="{{ user.email }}" required><br>
+      <label class="label">Email:</label><br>
+      <input class="input" type="email" name="email" value="{{ user.email }}" required><br>
 
-      <label>Role:</label><br>
-      <select name="role">
+      <label class="label">Role:</label><br>
+      <select class="input" name="role">
         <option value="none" {% if user.role == 'none' %}selected{% endif %}>None</option>
         <option value="admin" {% if user.role == 'admin' %}selected{% endif %}>Admin</option>
       </select><br><br>
@@ -29,5 +29,11 @@
     <br>
     <a href="{{ url_for('routes.admin_dashboard') }}">← Back to Dashboard</a>
   </div>
+
+    <footer>
+      <div class="left-align">
+        <a href="/about" class="homebtn">📇 About Us</a></div>
+        <p>&copy; All Right Reserved 2025</p>
+    </footer>
 </body>
 </html>
