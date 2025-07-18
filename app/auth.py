@@ -12,16 +12,21 @@ def login():
         password = request.form['password']
 
         user = User.query.filter_by(username=username).first()
-        if user and check_password_hash(user.password, password):
-            session['user_id'] = user.id
-            session['username'] = user.username
-            session['role'] = user.role  # 🔑 Save the role to session
 
-            flash('Logged in successfully', 'success')
-            return redirect(url_for('routes.dashboard'))
-        else:
-            flash('Invalid credentials', 'danger')
-            return redirect(url_for('auth.login'))
+        if user:
+            if user.blocked:
+                flash("Your account has been blocked. Please contact admin.", "danger")
+                return redirect(url_for('auth.login'))
+
+            if check_password_hash(user.password, password):
+                session['user_id'] = user.id
+                session['username'] = user.username
+                session['role'] = user.role
+                flash('Logged in successfully', 'success')
+                return redirect(url_for('routes.dashboard'))
+
+        flash('Invalid credentials', 'danger')
+        return redirect(url_for('auth.login'))
 
     return render_template('login.html')
 
@@ -51,7 +56,8 @@ def register():
             name=name,
             email=email,
             password=hashed_pw,
-            role='none'  
+            role='none',
+            blocked=False
         )
 
         db.session.add(new_user)
