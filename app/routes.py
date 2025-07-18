@@ -50,7 +50,7 @@ def add_user():
 
     return render_template('add_user.html')
 
-from flask import request  # Make sure this is imported
+from flask import request  
 
 @routes.route('/admin/edit/<int:user_id>', methods=['GET', 'POST'])
 def edit_user(user_id):
