@@ -22,12 +22,20 @@
         <td>{{ user.email }}</td>
         <td>{{ user.role }}</td>
         <td>{{ 'Blocked' if user.blocked else 'Active' }}</td>
-        <td>
-          <a href="{{ url_for('routes.edit_user', user_id=user.id) }}">✏️ Edit</a> |
-        </td>
+        <td class="actions-cell">
+  <a href="{{ url_for('routes.edit_user', user_id=user.id) }}">✏️ Edit</a> &nbsp;|&nbsp;
+  <a href="{{ url_for('routes.toggle_block_user', user_id=user.id) }}">⛔ Block</a> &nbsp;|&nbsp;
+  <a href="{{ url_for('routes.delete_user', user_id=user.id) }}">🗑️ Delete</a>
+</td>
       </tr>
       {% endfor %}
     </table>
   </div>
+
+    <footer>
+      <div class="left-align">
+        <a href="/about" class="homebtn">📇 About Us</a></div>
+        <p>&copy; All Right Reserved 2025</p>
+    </footer>
 </body>
 </html>
