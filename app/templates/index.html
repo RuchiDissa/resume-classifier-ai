@@ -17,9 +17,13 @@
     <h2>Login to your account</h2>
     <a href="/login" class="btn">Login</a>
 
-    <h2>Register Here If You Do Not Have Account</h2>
+    <h2>Register here if you do not have account</h2>
     <a href="/register" class="btn">Register</a>
 </div>
+
+{% if session['role'] == 'admin' %}
+    <a href="{{ url_for('routes.admin_dashboard') }}">Admin Panel</a>
+{% endif %}
 
 <footer>
   <p>&copy; 2025</p>
