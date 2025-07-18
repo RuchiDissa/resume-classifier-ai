@@ -6,23 +6,23 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div class="container">
+  <div class="auth-container">
     <h1>Add New User</h1>
     <form method="POST">
-      <label>Username:</label><br>
-      <input type="text" name="username" required><br>
+      <label class="label">Username:</label><br>
+      <input type="text" name="username" class="input" required><br>
 
-      <label>Name:</label><br>
-      <input type="text" name="name" required><br>
+      <label class="label">Name:</label><br>
+      <input type="text" name="name" class="input" required><br>
 
-      <label>Email:</label><br>
-      <input type="email" name="email" required><br>
+      <label class="label">Email:</label><br>
+      <input type="email" name="email" class="input" required><br>
 
-      <label>Password:</label><br>
-      <input type="password" name="password" required><br>
+      <label class="label">Password:</label><br>
+      <input type="password" name="password" class="input" required><br>
 
-      <label>Role:</label><br>
-      <select name="role">
+      <label class="label">Role:</label><br>
+      <select name="role" class="input">
         <option value="none">None</option>
         <option value="admin">Admin</option>
       </select><br><br>
@@ -32,5 +32,10 @@
     <br>
     <a href="{{ url_for('routes.admin_dashboard') }}">← Back to Dashboard</a>
   </div>
+    <footer>
+        <div class="left-align">
+            <a href="/about" class="homebtn">📇 About Us</a></div>
+        <p>&copy; All Right Reserved 2025</p>
+    </footer>
 </body>
 </html>
