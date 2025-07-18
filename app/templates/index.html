@@ -20,14 +20,11 @@
     <h2>Register here if you do not have account</h2>
     <a href="/register" class="btn">Register</a>
 </div>
-
-{% if session['role'] == 'admin' %}
-    <a href="{{ url_for('routes.admin_dashboard') }}">Admin Panel</a>
-{% endif %}
-
-<footer>
-  <p>&copy; 2025</p>
-</footer>
+    <footer>
+        <div class="left-align">
+            <a href="/about" class="homebtn">📇 About Us</a></div>
+        <p>&copy; All Right Reserved 2025</p>
+    </footer>
 
 </body>
 </html>
