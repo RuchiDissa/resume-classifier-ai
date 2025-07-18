@@ -12,6 +12,10 @@ routes = Blueprint('routes', __name__)
 def home():
     return render_template('index.html')
 
+@routes.route('/about')
+def about():
+    return render_template('aboutus.html')
+
 @routes.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
@@ -50,8 +54,6 @@ def add_user():
 
     return render_template('add_user.html')
 
-from flask import request  
-
 @routes.route('/admin/edit/<int:user_id>', methods=['GET', 'POST'])
 def edit_user(user_id):
     if 'role' not in session or session['role'] != 'admin':
@@ -70,6 +72,37 @@ def edit_user(user_id):
         return redirect(url_for('routes.admin_dashboard'))
 
     return render_template('edit_user.html', user=user)
+
+@routes.route('/admin/block/<int:user_id>')
+def toggle_block_user(user_id):
+    if 'role' not in session or session['role'] != 'admin':
+        flash("Access denied", "danger")
+        return redirect(url_for('routes.home'))
+
+    user = User.query.get_or_404(user_id)
+    user.blocked = not user.blocked  # Toggle block status
+    db.session.commit()
+
+    if user.blocked:
+        flash(f"User {user.username} has been blocked", "warning")
+    else:
+        flash(f"User {user.username} has been unblocked", "success")
+
+    return redirect(url_for('routes.admin_dashboard'))
+
+@routes.route('/admin/delete/<int:user_id>')
+def delete_user(user_id):
+    if 'role' not in session or session['role'] != 'admin':
+        flash("Access denied", "danger")
+        return redirect(url_for('routes.home'))
+
+    user = User.query.get_or_404(user_id)
+
+    db.session.delete(user)
+    db.session.commit()
+
+    flash("User deleted successfully", "success")
+    return redirect(url_for('routes.admin_dashboard'))
 
 @auth.route('/logout')
 def logout():
