@@ -1,25 +1,38 @@
 🗓️ Project Development Log
 
-📅 16/07/2025 — Initial Setup :
+📅 14/07/2025 — Internship Onboarding & Orientation:
+
+👨‍💼 Reported to the office and met with the assigned internship supervisor
+🏢 Discussed the company structure, internship expectations, and work environment
+📋 Completed initial HR formalities
+📚 Briefed on general conduct, workplace policies, and available resources
+
+📅 15/07/2025 — Project Assignment & Planning:
+
+🧠 Officially assigned to AI-Based Resume Classifier & Job Role Matcher project
+📄 Reviewed the project’s functional specifications and proposed technology stack
+🧩 Outlined the main components of the system
+🛠️ Identified relevant tools, libraries, and frameworks to be used
+
+📅 16/07/2025 — Initial Setup:
 
 🌐 Created foundational frontend pages:
-
-Homepage
-Login Page
-Register Page
-
+  - Homepage
+  - Login Page
+  - Register Page
 🛠️ Set up basic backend structure and routing control
 
-📅 17/07/2025 — Authentication Integration :
+📅 17/07/2025 — Authentication Integration:
+ 
 🔐 Implemented full login and registration functionality (frontend & backend)
 💾 Connected backend to database for user authentication
 📊 Integrated login flow with user dashboard
 
-📅 18/07/2025 — Admin Panel Features :
+📅 18/07/2025 — Admin Panel Features:
 
 🛠️ Implemented full Admin Panel (frontend + backend)
 👥 Added user management table to view all users
 ➕ Enabled adding new users
 ✏️ Added user edit functionality
-⛔ Added button to access blcok and unblcok button on admin panel
-🗑️ Added delete functionality 
+⛔ Added block and unblock functionality in the admin panel
+🗑️ Added delete user functionality
