@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
+<header>
+    {% include 'partials/navbar.html' %}
+  </header>
+<main>
 <div class="container">
     <h1 class="h1m">Dashboard</h1>
     <h2>Welcome to Your AI Resume Classifier Dashboard</h2>
@@ -22,13 +25,7 @@
 {% if session['role'] == 'admin' %}
     <a href="{{ url_for('routes.admin_dashboard') }}" class="btn">Admin Panel</a>
 {% endif %}
-
-    <footer>
-        <div class="left-align">
-            <a href="/about" class="homebtn">📇 About Us</a></div>
-        <p>&copy; All Right Reserved 2025</p>
-
-    </footer>
-
+</main>
+ {% include 'partials/footer.html' %}
 </body>
 </html>
