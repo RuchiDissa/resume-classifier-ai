@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
+<header>
+    {% include 'partials/navbar.html' %}
+  </header>
+<main>
 {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
     <ul>
@@ -35,17 +38,8 @@
     <p><h2>Don't have an account? Register here</h2></p>
     <a href="{{ url_for('auth.register') }}" class="btn">Register</a>
 
-    <div class="right-align">
-  <a href="#" class="homebtn">🏠 Home</a>
 </div>
-
-</div>
-
-    <footer>
-        <div class="left-align">
-            <a href="/about" class="homebtn">📇 About Us</a></div>
-        <p>&copy; All Right Reserved 2025</p>
-    </footer>
-
+</main>
+ {% include 'partials/footer.html' %}
 </body>
 </html>
