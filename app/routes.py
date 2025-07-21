@@ -16,6 +16,11 @@ def home():
 def about():
     return render_template('aboutus.html')
 
+@routes.route('/contact')
+def contact():
+    return render_template('contacts.html')
+
+
 @routes.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
