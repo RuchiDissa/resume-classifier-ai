@@ -23,7 +23,7 @@
 🛠️ Set up basic backend structure and routing control
 
 📅 17/07/2025 — Authentication Integration:
- 
+
 🔐 Implemented full login and registration functionality (frontend & backend)
 💾 Connected backend to database for user authentication
 📊 Integrated login flow with user dashboard
@@ -36,3 +36,10 @@
 ✏️ Added user edit functionality
 ⛔ Added block and unblock functionality in the admin panel
 🗑️ Added delete user functionality
+
+📅 21/07/2025 — UI Enhancement & Page Expansion:
+
+🎨 Updated CSS styling to unify and modernize the visual appearance
+📄 Created contacts.html and aboutus.html pages with appropriate content
+🧭 Updated navigation bar to include new menu items
+📥 Integrated common navbar and footer via Jinja includes for code reusability
