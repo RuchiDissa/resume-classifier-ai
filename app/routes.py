@@ -1,5 +1,7 @@
-from flask import Blueprint, render_template, session, url_for, flash
-from werkzeug.utils import redirect
+import os
+
+from flask import Blueprint, render_template, session, url_for, flash, current_app
+from werkzeug.utils import redirect, secure_filename
 from flask import request
 
 from app import db
@@ -24,6 +26,38 @@ def contact():
 @routes.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
+
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'pdf', 'docx', 'txt'}
+
+@routes.route('/upload', methods=['GET', 'POST'])
+def upload_resume():
+    if request.method == 'POST':
+        if 'resume' not in request.files:
+            flash('No file part', 'danger')
+            return redirect(request.url)
+
+        file = request.files['resume']
+
+        if file.filename == '':
+            flash('No file selected', 'warning')
+            return redirect(request.url)
+
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            save_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
+            os.makedirs(current_app.config['UPLOAD_FOLDER'], exist_ok=True)
+            file.save(save_path)
+
+            flash('Resume uploaded successfully!', 'success')
+            return redirect(url_for('routes.upload_resume'))
+        else:
+            flash('Invalid file type. Please upload PDF, DOCX, or TXT files.', 'danger')
+            return redirect(request.url)
+
+    return render_template('upload.html')  # You'll create this template next
+
 
 @routes.route('/admin')
 def admin_dashboard():
@@ -114,3 +148,4 @@ def logout():
     session.clear()
     flash("You have been logged out", "info")
     return redirect(url_for('routes.home'))
+
