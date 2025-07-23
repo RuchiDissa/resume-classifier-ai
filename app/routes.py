@@ -3,6 +3,7 @@ import os
 from flask import Blueprint, render_template, session, url_for, flash, current_app
 from werkzeug.utils import redirect, secure_filename
 from flask import request
+from flask import send_from_directory
 
 from app import db
 from app.auth import auth
@@ -33,6 +34,8 @@ def allowed_file(filename):
 
 @routes.route('/upload', methods=['GET', 'POST'])
 def upload_resume():
+    uploaded_files = []
+
     if request.method == 'POST':
         if 'resume' not in request.files:
             flash('No file part', 'danger')
@@ -49,15 +52,34 @@ def upload_resume():
             save_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
             os.makedirs(current_app.config['UPLOAD_FOLDER'], exist_ok=True)
             file.save(save_path)
-
             flash('Resume uploaded successfully!', 'success')
-            return redirect(url_for('routes.upload_resume'))
         else:
             flash('Invalid file type. Please upload PDF, DOCX, or TXT files.', 'danger')
-            return redirect(request.url)
 
-    return render_template('upload.html')  # You'll create this template next
+    # 🧾 Get list of uploaded files
+    folder_path = current_app.config['UPLOAD_FOLDER']
+    if os.path.exists(folder_path):
+        uploaded_files = os.listdir(folder_path)
 
+    return render_template('upload.html', uploaded_files=uploaded_files)
+
+@routes.route('/uploads/delete/<filename>')
+def delete_resume(filename):
+    folder_path = current_app.config['UPLOAD_FOLDER']
+    file_path = os.path.join(folder_path, filename)
+
+    if os.path.exists(file_path):
+        os.remove(file_path)
+        flash(f"{filename} deleted successfully", "success")
+    else:
+        flash(f"{filename} not found", "danger")
+
+    return redirect(url_for('routes.upload_resume'))
+
+@routes.route('/uploads/edit/<filename>', methods=['GET', 'POST'])
+def edit_resume(filename):
+    flash("Edit functionality coming soon!", "info")
+    return redirect(url_for('routes.upload_resume'))
 
 @routes.route('/admin')
 def admin_dashboard():
