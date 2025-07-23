@@ -2,24 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Upload Resume</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 <header>
     {% include 'partials/navbar.html' %}
-  </header>
-<main>
-<div class="auth-container">
-    <h1>Upload your Resume here</h1>
+</header>
 
-    <form method="POST" enctype="multipart/form-data">
-      <label class="label">Choose your resume (PDF, DOCX, TXT):</label><br>
-      <input type="file" name="resume" accept=".pdf,.docx,.txt" class="input" required><br><br>
-      <button type="submit" class="btn">Upload Resume</button>
-    </form>
-</div>
+<main>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul>
+        {% for category, message in messages %}
+          <li style="color: {% if category == 'success' %}green{% else %}red{% endif %}; font-weight: bold;">
+            {{ message }}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <div class="auth-container">
+      <h1>Upload your Resume here</h1>
+
+      <form method="POST" enctype="multipart/form-data">
+        <label class="label">Choose your resume (PDF, DOCX, TXT):</label><br>
+        <input type="file" name="resume" accept=".pdf,.docx,.txt" class="input" required><br><br>
+        <button type="submit" class="btn">Upload Resume</button>
+      </form>
+
+      <a href="{{ url_for('auth.logout') }}" class="btn">Logout</a>
+
+      {% if uploaded_files %}
+  <div class="upload-list">
+    <h2>Uploaded Resumes</h2>
+    <ul>
+      {% for file in uploaded_files %}
+        <li>
+          <a href="{{ url_for('static', filename='uploads/' + file) }}" target="_blank">{{ file }}</a>
+
+          <a href="{{ url_for('routes.delete_resume', filename=file) }}" class="delete-link">
+            <i class="fa-solid fa-trash" style="color: red;"></i> Delete
+          </a>
+
+          <a href="{{ url_for('routes.edit_resume', filename=file) }}" class="edit-link">
+            <i class="fa-solid fa-pen-to-square" style="color: blue;"></i> Edit
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
+  </div>
 </main>
- {% include 'partials/footer.html' %}
+
+{% include 'partials/footer.html' %}
 </body>
 </html>
