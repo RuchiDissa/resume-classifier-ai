@@ -50,3 +50,12 @@
 🧠 Implemented resume file upload form supporting .pdf, .docx, and .txt formats
 🛠️ Set up backend routing to handle resume file submissions securely
 🔎 Validated supported file types and prepared backend for content parsing
+
+📅 23/07/2025 — Resume Management Enhancements:
+
+📂 Displayed uploaded resume files dynamically in a list
+🗑️ Implemented delete functionality for uploaded resumes
+✏️ Added edit functionality placeholder for future enhancements
+🛠️ Fixed upload file path to correctly store in the static/uploads/ folder
+✅ Refined flash message filtering to display only relevant messages on each page
+🔧 Standardized navigation bar appearance across all pages
