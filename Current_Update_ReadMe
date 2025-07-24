@@ -59,3 +59,13 @@
 🛠️ Fixed upload file path to correctly store in the static/uploads/ folder
 ✅ Refined flash message filtering to display only relevant messages on each page
 🔧 Standardized navigation bar appearance across all pages
+
+📅 24/07/2025 — Text Extraction & UI Improvements:
+
+🧠 Integrated resume text extraction using PyMuPDF and python-docx for PDF/DOCX/TXT files
+⚙️ Added "Extract" button for each uploaded file with backend processing
+📝 Implemented dynamic display of extracted text only upon Extract click
+❌ Added "Clear Text" button to remove displayed extracted content
+🎨 Styled extracted text container for a modern, clean appearance
+🛠️ Refactored backend to manage session state for extracted text
+✅ Ensured extracted text is not shown automatically after upload (user must click Extract)
