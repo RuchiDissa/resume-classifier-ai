@@ -69,3 +69,11 @@
 🎨 Styled extracted text container for a modern, clean appearance
 🛠️ Refactored backend to manage session state for extracted text
 ✅ Ensured extracted text is not shown automatically after upload (user must click Extract)
+
+📅 25/07/2025 — Automated Contact Information Extraction:
+
+🤖 Developed backend logic to automatically extract Name, Email, and Phone Number from extracted resume text
+🔍 Applied regular expressions and keyword heuristics to accurately identify personal contact details
+🖥️ Displayed extracted contact information clearly on the resume detail page
+✅ Validated extraction results with multiple test resumes for reliability
+🛠️ Prepared groundwork for further detailed resume parsing and classification
