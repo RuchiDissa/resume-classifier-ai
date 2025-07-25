@@ -8,6 +8,7 @@ from flask import send_from_directory
 from app import db
 from app.auth import auth
 from app.models import User
+from app.resume_parser import extract_resume_text, extract_basic_info
 
 routes = Blueprint('routes', __name__)
 
@@ -28,6 +29,9 @@ def contact():
 def dashboard():
     return render_template('dashboard.html')
 
+@routes.route('/create_resume')
+def create_resume():
+    return render_template('create_resume.html')
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'pdf', 'docx', 'txt'}
@@ -35,8 +39,11 @@ def allowed_file(filename):
 @routes.route('/upload', methods=['GET', 'POST'])
 def upload_resume():
     uploaded_files = []
+    extracted_text = None
 
     if request.method == 'POST':
+        session.pop('extracted_text', None)
+
         if 'resume' not in request.files:
             flash('No file part', 'danger')
             return redirect(request.url)
@@ -52,16 +59,20 @@ def upload_resume():
             save_path = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
             os.makedirs(current_app.config['UPLOAD_FOLDER'], exist_ok=True)
             file.save(save_path)
-            flash('Resume uploaded successfully!', 'success')
+
+            flash('Resume uploaded successfully! Click Extract to analyze.', 'success')
         else:
             flash('Invalid file type. Please upload PDF, DOCX, or TXT files.', 'danger')
 
-    # 🧾 Get list of uploaded files
+    else:
+        if 'extracted_text' in session:
+            extracted_text = session.pop('extracted_text')
+
     folder_path = current_app.config['UPLOAD_FOLDER']
     if os.path.exists(folder_path):
         uploaded_files = os.listdir(folder_path)
 
-    return render_template('upload.html', uploaded_files=uploaded_files)
+    return render_template('upload.html', uploaded_files=uploaded_files, extracted_text=extracted_text)
 
 @routes.route('/uploads/delete/<filename>')
 def delete_resume(filename):
@@ -165,9 +176,51 @@ def delete_user(user_id):
     flash("User deleted successfully", "success")
     return redirect(url_for('routes.admin_dashboard'))
 
+from flask import session
+
+@routes.route('/resume/analyze/<filename>')
+def analyze_resume(filename):
+    folder_path = current_app.config['UPLOAD_FOLDER']
+    file_path = os.path.join(folder_path, filename)
+
+    try:
+
+        extracted_text = extract_resume_text(file_path)
+        session['extracted_text'] = extracted_text
+
+        info = extract_basic_info(extracted_text)
+        session['extracted_info'] = info
+
+        flash(f'Text extracted from {filename}', 'success')
+    except Exception as e:
+        flash(f"Error extracting text: {e}", 'danger')
+
+    return redirect(url_for('routes.upload_resume'))
+
+@routes.route('/resume/analyze-info/<filename>')
+def analyze_info(filename):
+    folder_path = current_app.config['UPLOAD_FOLDER']
+    file_path = os.path.join(folder_path, filename)
+
+    try:
+        extracted_text = extract_resume_text(file_path)
+        info = extract_basic_info(extracted_text)
+        flash(f'Extracted info from {filename}', 'success')
+        return render_template('analyze_info.html', extracted_info=info)
+    except Exception as e:
+        flash(f"Error analyzing info: {e}", 'danger')
+        return redirect(url_for('routes.upload_resume'))
+
+
+@routes.route('/clear_extracted_text')
+def clear_extracted_text():
+    session.pop('extracted_text', None)
+    flash("Extracted text cleared", "info")
+    return redirect(url_for('routes.upload_resume'))
+
 @auth.route('/logout')
 def logout():
     session.clear()
     flash("You have been logged out", "info")
-    return redirect(url_for('routes.home'))
+    return redirect(url_for('auth.login'))
 
