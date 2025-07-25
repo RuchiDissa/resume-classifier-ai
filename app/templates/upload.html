@@ -12,7 +12,6 @@
 </header>
 
 <main>
-
   {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
       <ul>
@@ -37,29 +36,50 @@
       <a href="{{ url_for('auth.logout') }}" class="btn">Logout</a>
 
       {% if uploaded_files %}
-  <div class="upload-list">
-    <h2>Uploaded Resumes</h2>
-    <ul>
-      {% for file in uploaded_files %}
-        <li>
-          <a href="{{ url_for('static', filename='uploads/' + file) }}" target="_blank">{{ file }}</a>
+      <div class="upload-list">
+        <h2>Uploaded Resumes</h2>
+        <ul class="resume-list">
+          {% for file in uploaded_files %}
+          <li class="resume-item">
+            <span class="file-name" onclick="toggleMenu('{{ file }}')">{{ file }}</span>
 
-          <a href="{{ url_for('routes.delete_resume', filename=file) }}" class="delete-link">
-            <i class="fa-solid fa-trash" style="color: red;"></i> Delete
-          </a>
+            <div id="menu-{{ file }}" class="resume-menu hidden">
+  <a href="{{ url_for('routes.analyze_resume', filename=file) }}" class="btn btn-extract">⚙️ Extract Text</a>
+  <a href="{{ url_for('routes.analyze_info', filename=file) }}" class="btn btn-analyze">🔎 Analyze Info</a>
+  <a href="{{ url_for('static', filename='uploads/' + file) }}" target="_blank" class="btn">🔍 View</a>
+  <a href="{{ url_for('routes.edit_resume', filename=file) }}" class="btn">✏️ Edit</a>
+  <a href="{{ url_for('routes.delete_resume', filename=file) }}" class="btn">🗑️ Delete</a>
+</div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
 
-          <a href="{{ url_for('routes.edit_resume', filename=file) }}" class="edit-link">
-            <i class="fa-solid fa-pen-to-square" style="color: blue;"></i> Edit
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+      {% if extracted_text %}
+<div class="extracted-text-container">
+  <h2>Extracted Resume Text</h2>
+  <pre>{{ extracted_text }}</pre>
+  <a href="{{ url_for('routes.clear_extracted_text') }}" class="btn">❌ Clear Text</a>
+</div>
 {% endif %}
 
   </div>
 </main>
 
 {% include 'partials/footer.html' %}
+
+<script>
+  function toggleMenu(filename) {
+    document.querySelectorAll('.resume-menu').forEach(menu => {
+      menu.classList.add('hidden');
+    });
+
+    const menu = document.getElementById('menu-' + filename);
+    if (menu) {
+      menu.classList.toggle('hidden');
+    }
+  }
+</script>
 </body>
 </html>
