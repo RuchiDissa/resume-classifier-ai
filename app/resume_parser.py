@@ -3,6 +3,9 @@ import docx
 import re
 from collections import namedtuple
 
+from app.skills_list import SKILLS
+
+
 def extract_text_from_pdf(filepath):
     text = ""
     doc = fitz.open(filepath)
@@ -54,6 +57,8 @@ def extract_name(text):
 
 ExtractedInfo = namedtuple('ExtractedInfo', ['name', 'email', 'phone'])
 
+
+
 def extract_basic_info(text):
 
     email_match = re.search(r'[\w\.-]+@[\w\.-]+', text)
@@ -70,3 +75,12 @@ def extract_basic_info(text):
             break
 
     return ExtractedInfo(name=name, email=email, phone=phone)
+
+
+def extract_skills(text):
+    found = []
+    text_lower = text.lower()
+    for skill in SKILLS:
+        if skill.lower() in text_lower:
+            found.append(skill)
+    return found
