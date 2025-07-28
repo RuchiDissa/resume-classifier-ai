@@ -13,7 +13,7 @@
 
 <main>
   <div class="auth-container">
-    <h1>Resume Information Extracted</h1>
+    <h1>📄 Resume Information Extracted</h1>
 
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
@@ -29,16 +29,26 @@
 
     {% if extracted_info %}
       <div class="upload-list">
-        <h2>Candidate Details</h2>
+        <h2>👤 Candidate Details</h2>
         <p><strong>Name:</strong> {{ extracted_info.name or 'Not Found' }}</p>
         <p><strong>Email:</strong> {{ extracted_info.email or 'Not Found' }}</p>
         <p><strong>Phone:</strong> {{ extracted_info.phone or 'Not Found' }}</p>
 
+        {% if extracted_info.skills %}
+          <h2>🛠️ Extracted Skills</h2>
+          <ul>
+            {% for skill in extracted_info.skills %}
+              <li>{{ skill }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        <a href="{{ url_for('routes.extract_skills_route', filename=filename) }}" class="btn">🧠 Skills</a>
         <a href="{{ url_for('routes.upload_resume') }}" class="btn">⬅️ Back to Uploads</a>
         <a href="{{ url_for('routes.clear_extracted_text') }}" class="btn">❌ Clear Info</a>
       </div>
     {% else %}
-      <p>No info extracted. Please try again.</p>
+      <p>No information extracted. Please try again.</p>
       <a href="{{ url_for('routes.upload_resume') }}" class="btn">⬅️ Back</a>
     {% endif %}
   </div>
