@@ -78,7 +78,7 @@
 ✅ Validated extraction results with multiple test resumes for reliability
 🛠️ Prepared groundwork for further detailed resume parsing and classification
 
-📅 26/07/2025 — Resume Info Analysis & User-Based File Management:
+📅 28/07/2025 — Resume Info Analysis & User-Based File Management:
 
 🛠️ Implemented backend route to extract skills from resume text using a predefined skill list
 📄 Created and maintained a dedicated skills_list.py file with common technical and soft skills
@@ -86,4 +86,15 @@
 📊 Displayed extracted skills in structured format on the Resume Info Analysis page
 🎨 Styled skill display for clarity and professional appearance
 ✅ Validated skill extraction with test resumes containing mixed skill sets
-🔧 Prepared backend for integration of job role matching using extracted skills
+🔧 Prepared backend for integration of job role matching using extracted 
+
+📅 29/07/2025 — Education & Experience Extraction Implementation:
+
+📚 Developed backend functionality to detect Education and Experience sections from extracted resume text using section headers and regex heuristics
+📄 Added extract_education_experience() function in resume_parser.py to locate and extract up to 1000 characters following relevant section headers
+🧩 Integrated new route /resume/analyze-sections/<filename> for analyzing Education & Experience content separately
+💻 Created analyze_sections.html to present extracted Education and Experience in a clean, readable format
+🔗 Connected the new "📚 Sections" button on Resume Info page to trigger this analysis
+✅ Tested and validated section extraction with sample resumes in PDF and DOCX formats
+🔧 Enhanced user feedback with clear messages when sections are not found or partially extracted
+🛠️ Improved reliability by handling user-based uploaded file paths for accurate resume targeting
