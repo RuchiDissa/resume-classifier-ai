@@ -7,7 +7,7 @@ from flask import request
 from app import db
 from app.auth import auth
 from app.models import User
-from app.resume_parser import extract_resume_text, extract_basic_info, extract_skills
+from app.resume_parser import extract_resume_text, extract_basic_info, extract_skills, extract_education_experience
 
 routes = Blueprint('routes', __name__)
 
@@ -262,6 +262,31 @@ def analyze_info(filename):
         return render_template('analyze_info.html', extracted_info=info, filename=filename)
     except Exception as e:
         flash(f"Error analyzing info: {e}", 'danger')
+        return redirect(url_for('routes.upload_resume'))
+
+@routes.route('/resume/analyze-sections/<filename>')
+def analyze_sections(filename):
+    user_id = session.get('user_id')
+    if not user_id:
+        flash("Please log in first", "danger")
+        return redirect(url_for('auth.login'))
+
+    user_folder = os.path.join(current_app.config['UPLOAD_FOLDER'], str(user_id))
+    file_path = os.path.join(user_folder, filename)
+
+    try:
+        extracted_text = extract_resume_text(file_path)
+        education, experience = extract_education_experience(extracted_text)
+
+        if not education:
+            education = "No education section found."
+        if not experience:
+            experience = "No experience section found."
+
+        flash(f'Education and Experience extracted from {filename}', 'success')
+        return render_template('analyze_sections.html', education=education, experience=experience)
+    except Exception as e:
+        flash(f"Error analyzing sections: {e}", 'danger')
         return redirect(url_for('routes.upload_resume'))
 
 @routes.route('/clear_extracted_text')
