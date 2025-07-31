@@ -12,8 +12,6 @@ This project is part of my internship at **Bitzify**, focused on developing an A
 - 📄 Upload resumes in PDF, DOCX, or TXT format
 - 🧠 Automatically extract key information (skills, education, experience)
 - 🔍 Extract contact details: Name, Email, Phone
-- 🧩 Classify resumes into predefined job categories using Machine Learning
-- 📊 Display top 3 job roles with confidence scores
 - 🌐 Simple, responsive web interface
 - ⚡ Fast backend response (< 2 seconds)
 - 👨‍💼 Admin panel for user management (add/edit/delete/block users)
@@ -34,42 +32,53 @@ This project is part of my internship at **Bitzify**, focused on developing an A
 ## 📸 Snapshots
 
 ### 🏠 Homepage Interface
-<img width="804" height="822" alt="Homepage Screenshot" src="https://github.com/user-attachments/assets/aa14e241-5a95-4424-acb8-4209427fc5d0" />
+<img width="827" height="913" alt="Screenshot 2025-07-31 132311" src="https://github.com/user-attachments/assets/9c13e475-e6d5-43ba-bd1e-deca03e8de75" />
+<img width="838" height="869" alt="Screenshot 2025-07-31 132331" src="https://github.com/user-attachments/assets/0d8e05dd-5e4a-4d9c-87e1-6ec9d6c3ace9" />
+
 
 ### 🔐 Login Page
-<img width="806" height="807" alt="Login Page Screenshot" src="https://github.com/user-attachments/assets/92f54748-fa1b-425f-96a0-65f402aea801" />
+<img width="804" height="822" alt="Screenshot 2025-07-31 131835" src="https://github.com/user-attachments/assets/5ed88aa1-45cf-4246-9325-b3d0d1730f46" />
+
 
 ### 📝 Register Page
-<img width="544" height="915" alt="Register Page Screenshot" src="https://github.com/user-attachments/assets/cd76faef-bfdf-433f-babd-40213565782f" />
+<img width="817" height="877" alt="Screenshot 2025-07-31 134410" src="https://github.com/user-attachments/assets/dd16a15d-3312-44d7-bfca-a6d829b8b269" />
+
 
 ### 📊 User Dashboard
-<img width="827" height="899" alt="User Dashboard Screenshot" src="https://github.com/user-attachments/assets/a4b04825-e420-401b-a08e-8f554ab50779" />
+<img width="827" height="899" alt="Screenshot 2025-07-31 131931" src="https://github.com/user-attachments/assets/b78f7182-c9a4-4216-83ba-4b8e793d4cdc" />
+
 
 ### 📤 Resume Upload Page
-<img width="814" height="718" alt="Resume Upload Screenshot" src="https://github.com/user-attachments/assets/c5edfbc7-8265-441f-91de-bf09492a895f" />
+<img width="815" height="594" alt="Screenshot 2025-07-31 131944" src="https://github.com/user-attachments/assets/8733754d-1d6d-4071-84e8-deb1977d8a76" />
+
 
 ### 📄 Uploaded Resumes List
-<img width="815" height="594" alt="Uploaded Resumes Screenshot" src="https://github.com/user-attachments/assets/433fccdf-05e3-4eb8-ac88-24b581b29574" />
+<img width="814" height="718" alt="Screenshot 2025-07-31 132008" src="https://github.com/user-attachments/assets/2bc1b547-5e41-4f72-b409-8e554993e8bf" />
+
 
 ### 🔎 Extracted Resume Text
-<img width="766" height="569" alt="Extracted Resume Text Screenshot" src="https://github.com/user-attachments/assets/fb6812e1-b5bf-445b-b0be-ea93939f9976" />
+<img width="544" height="915" alt="Screenshot 2025-07-31 132047" src="https://github.com/user-attachments/assets/32261954-c18d-413d-9f8a-a7d34a8a2d17" />
+
 
 ### 📧 Extracted Contact Info
-<img width="773" height="635" alt="Extracted Contact Info Screenshot" src="https://github.com/user-attachments/assets/e0f86760-3120-46fb-8d61-028c8e11ca10" />
+<img width="766" height="569" alt="Screenshot 2025-07-31 132107" src="https://github.com/user-attachments/assets/56d08d46-de97-412d-bb28-c8bd54244869" />
+
 
 ### 🧠 Resume Skill Analysis
-<img width="773" height="804" alt="Resume Skills Screenshot" src="https://github.com/user-attachments/assets/bb29fba9-4d27-43d3-9be1-77466d1731f6" />
+<img width="773" height="635" alt="Screenshot 2025-07-31 132116" src="https://github.com/user-attachments/assets/7adcfb96-24a1-4cb3-8c8d-ef9f4f9b135a" />
 
 ### 🎓 Education & Experience Sections
-<img width="827" height="913" alt="Education Experience Screenshot" src="https://github.com/user-attachments/assets/c9f81c9a-f15b-4b04-a9bc-e9f565a14257" />
+<img width="773" height="804" alt="Screenshot 2025-07-31 132254" src="https://github.com/user-attachments/assets/c8df96af-038b-4de1-a0b8-ef4315766cbe" />
 
-### 🧩 Job Role Classification Result
-<img width="838" height="869" alt="Job Classification Screenshot" src="https://github.com/user-attachments/assets/20f0536b-4b4f-4b60-9228-5ccc1b2a872a" />
 
 ### ⚙️ Admin Panel - User Management
-<img width="828" height="837" alt="Admin Panel Screenshot" src="https://github.com/user-attachments/assets/d26bb8cd-7883-4c6a-8eb2-2dd7f40352ed" />
+<img width="839" height="869" alt="Screenshot 2025-07-31 134031" src="https://github.com/user-attachments/assets/681e9b29-a2e9-4687-9816-cf02df82844c" />
+
 
 ### 🗂️ Edit User Interface
-<img width="828" height="907" alt="Edit User Screenshot" src="https://github.com/user-attachments/assets/6ae4d9f7-dcc4-4443-8b1d-0aae4a809cf4" />
+<img width="832" height="909" alt="Screenshot 2025-07-31 134926" src="https://github.com/user-attachments/assets/dd7f08a9-eefb-4f27-b123-dc5829d5218a" />
+
+### ➕ Add User Interface
+<img width="817" height="896" alt="Screenshot 2025-07-31 134945" src="https://github.com/user-attachments/assets/f2dd283f-80d8-42f7-be60-fa87e572ca5b" />
 
 ---
