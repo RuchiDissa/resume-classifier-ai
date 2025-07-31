@@ -105,3 +105,12 @@
 🛠️ Refined name extraction logic to handle edge cases across different file formats (split names, titles misidentified as names)
 📝 Improved experience detection by adjusting header recognition and fallback to job-related keywords
 🧠 Enhanced education and experience parsing for DOCX/TXT files by dynamically identifying and merging multiline section content
+
+📅 31/07/2025 — Resume Parsing Validation & Enhancements (Testing Day)
+🧪 Conducted comprehensive testing on resume parsing logic across multiple file formats (PDF, DOCX, TXT)
+📝 Validated the extraction of name, email, phone, skills, education, and experience from real-world resume samples
+🔍 Identified edge cases causing incorrect name extraction in DOCX and TXT formats (e.g., split names, misidentified job titles)
+🧠 Refined the approach to name extraction by analyzing line structure, header proximity, and spacing patterns
+⚙️ Reviewed and verified section extraction logic to ensure education/experience segments were correctly identified in varied layouts
+✅ Confirmed stability and reliability of skills extraction and session management across multiple user uploads
+🛠️ No major code changes; focus was on accuracy testing, edge case identification, and preparing for classifier enhancements
