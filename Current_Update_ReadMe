@@ -114,3 +114,11 @@
 ⚙️ Reviewed and verified section extraction logic to ensure education/experience segments were correctly identified in varied layouts
 ✅ Confirmed stability and reliability of skills extraction and session management across multiple user uploads
 🛠️ No major code changes; focus was on accuracy testing, edge case identification, and preparing for classifier enhancements
+
+📅 01/08/2025 — Extraction Bug Fixes & Format Consistency Validation
+
+🧪 Conducted extended testing on newly collected resume samples in varied formats (PDF, DOCX, TXT)
+🐞 Identified critical issues in text extraction from certain DOCX and PDF files due to inconsistent formatting and encoding
+🛠️ Refined extraction functions to ensure consistent output across file types, especially focusing on DOCX multi-line name handling and whitespace normalization
+🔍 Fixed bugs related to incorrect name detection when job titles appeared near the top of the resume
+📊 Verified extracted text previews and validated improvements in name, email, and phone accuracy across all tested resumes
