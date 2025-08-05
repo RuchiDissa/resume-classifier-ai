@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<header>
+    {% include 'partials/navbar.html' %}
+  </header>
+<main>
+  <div class="container">
+    <h1 class="h1m">🌟 Contacts Developer</h1>
+  </div>
+
+  <div class="auth-container">
+    <h1 class="h1m">👤 Developer Contact</h1>
+    <div class="about-cards">
+      <div class="contact-card">
+        <i class="fa-solid fa-envelope"></i>
+        <div class="contact-title">Email</div>
+        <a href="mailto:ruchiradissanayaka2@gmail.com">ruchiradissanayaka2@gmail.com</a>
+      </div>
+
+      <div class="contact-card">
+        <i class="fa-brands fa-whatsapp"></i>
+        <div class="contact-title">WhatsApp</div>
+        <a href="https://wa.me/94763976107" target="_blank">+94 76 397 6107</a>
+      </div>
+
+      <div class="contact-card">
+        <i class="fa-brands fa-linkedin"></i>
+        <div class="contact-title">LinkedIn</div>
+        <a href="https://www.linkedin.com/in/ruchira-dissanayaka-b634b21a5" target="_blank">Ruchira Dissanayaka</a>
+      </div>
+
+      <div class="contact-card">
+        <i class="fa-brands fa-github"></i>
+        <div class="contact-title">GitHub</div>
+        <a href="https://github.com/RuchiDissa" target="_blank">RuchiDissa</a>
+      </div>
+    </div>
+  </div>
+</main>
+ {% include 'partials/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Your Uploaded Resumes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+<header>
+    {% include 'partials/navbar.html' %}
+</header>
+<main>
+    <div class="auth-container">
+    <h1>Your Uploaded Resumes</h1>
+
+    {% if files %}
+        <ul class="resume-list">
+        {% for file in files %}
+            <li class="resume-item">
+                {{ file }}
+                <a href="{{ url_for('routes.classify_role', filename=file) }}" class="btn">🔎 Analyze Info</a>
+
+                <a href="{{ url_for('routes.delete_resume', filename=file) }}" class="btn">🗑️ Delete</a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No resumes uploaded yet.</p>
+    {% endif %}
+
+    <a href="{{ url_for('routes.upload_resume') }}" class="btn">Upload Another Resume</a>
+
+    <a href="{{ url_for('routes.dashboard') }}" class="btn">← Back to Dashboard</a>
+</div>
+</main>
+{% include 'partials/footer.html' %}
+</body>
+</html>

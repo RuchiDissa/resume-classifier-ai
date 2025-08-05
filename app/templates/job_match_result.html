@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Match Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    {% include 'partials/navbar.html' %}
+</header>
+<main>
+<div class="auth-container">
+    <h1>Job Match Result</h1>
+    <p><strong>File:</strong> {{ filename }}</p>
+    <p><strong>Predicted Job Role:</strong> {{ predicted_role if predicted_role else "No match found" }}</p>
+
+    <h3>Matched Skills:</h3>
+    {% if matched_skills %}
+        <ul class="resume-list">
+            {% for skill in matched_skills %}
+                <li class="resume-item">{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No skills matched.</p>
+    {% endif %}
+
+    <a href="{{ url_for('routes.job_matches') }}" class="btn">← Back to Job Matches</a>
+</div>
+</main>
+{% include 'partials/footer.html' %}
+</body>
+</html>
