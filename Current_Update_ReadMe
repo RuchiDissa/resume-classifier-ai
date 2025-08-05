@@ -107,6 +107,7 @@
 🧠 Enhanced education and experience parsing for DOCX/TXT files by dynamically identifying and merging multiline section content
 
 📅 31/07/2025 — Resume Parsing Validation & Enhancements (Testing Day)
+
 🧪 Conducted comprehensive testing on resume parsing logic across multiple file formats (PDF, DOCX, TXT)
 📝 Validated the extraction of name, email, phone, skills, education, and experience from real-world resume samples
 🔍 Identified edge cases causing incorrect name extraction in DOCX and TXT formats (e.g., split names, misidentified job titles)
@@ -130,3 +131,12 @@
 📂 Created and populated resume_samples.csv with training data including timestamp, skills, and job roles
 🔍 Implemented and validated skill-to-role matching using overlapping keywords from a predefined skill list
 ✅ Successfully tested the classifier on sample data; verified accurate job role predictions for test cases
+
+📅 05/08/2025 — Testing Job Role Classifier & Admin Panel Update
+
+🧪 Job Role Classifier Testing
+    Tested the job role classifier using various resume files to evaluate prediction accuracy and robustness.
+🛠️ Admin Panel Enhancements
+    Added Edit User and Add User functionalities.
+    Converted existing HTML forms into modals for a cleaner, more interactive user experience.
+
