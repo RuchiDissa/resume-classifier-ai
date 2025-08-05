@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 <header>
@@ -17,8 +18,9 @@
 </div>
 
 <div class="auth-container">
-    <a href="#" class="btn">Upload Resume</a>
-    <a href="#" class="btn">View Job Matches</a>
+    <!--<a href="/create_resume" class="btn">Create resume</a>-->
+    <a href="/upload" class="btn">Upload Resume</a>
+    <a href="{{ url_for('routes.job_matches') }}" class="btn">View Job Matches</a>
     <a href="{{ url_for('auth.logout') }}" class="btn">Logout</a>
 </div>
 
