@@ -122,3 +122,11 @@
 🛠️ Refined extraction functions to ensure consistent output across file types, especially focusing on DOCX multi-line name handling and whitespace normalization
 🔍 Fixed bugs related to incorrect name detection when job titles appeared near the top of the resume
 📊 Verified extracted text previews and validated improvements in name, email, and phone accuracy across all tested resumes
+
+📅 04/08/2025 — Job Role Classifier Prototype & Integration Planning
+
+🧠 Explored Job Role Classification Logic using skill matching and CSV-based role mapping
+🛠️ Developed a standalone prototype classifier script that predicts job roles based on extracted skills
+📂 Created and populated resume_samples.csv with training data including timestamp, skills, and job roles
+🔍 Implemented and validated skill-to-role matching using overlapping keywords from a predefined skill list
+✅ Successfully tested the classifier on sample data; verified accurate job role predictions for test cases
