@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 <header>
-    {% include 'partials/navbar.html' %}
-  </header>
+  {% include 'partials/navbar.html' %}
+</header>
+
 <main>
   <div class="container">
     <h1>Admin Dashboard</h1>
+    <button onclick="openModal('addUserModal')" class="btn">➕ Add New User</button>
     <a href="{{ url_for('auth.logout') }}" class="btn">Logout</a>
-    <a href="{{ url_for('routes.add_user') }}" class="btn">➕ Add New User</a>
 
     <table border="1" cellpadding="5">
       <tr>
@@ -26,16 +28,83 @@
         <td>{{ user.email }}</td>
         <td>{{ user.role }}</td>
         <td>{{ 'Blocked' if user.blocked else 'Active' }}</td>
-        <td class="actions-cell">
-  <a href="{{ url_for('routes.edit_user', user_id=user.id) }}">✏️ Edit</a> &nbsp;|&nbsp;
-  <a href="{{ url_for('routes.toggle_block_user', user_id=user.id) }}">⛔ Block</a> &nbsp;|&nbsp;
-  <a href="{{ url_for('routes.delete_user', user_id=user.id) }}">🗑️ Delete</a>
-</td>
+        <td>
+          <button onclick="openEditModal({{ user.id }}, '{{ user.username }}', '{{ user.name }}', '{{ user.email }}', '{{ user.role }}')" class="btn">✏️ Edit</button>
+          <a href="{{ url_for('routes.toggle_block_user', user_id=user.id) }}">⛔ Block</a>
+          <a href="{{ url_for('routes.delete_user', user_id=user.id) }}">🗑️ Delete</a>
+        </td>
       </tr>
       {% endfor %}
     </table>
   </div>
 </main>
- {% include 'partials/footer.html' %}
+
+<div id="addUserModal" class="modal">
+  <div class="modal-content">
+    <span class="btn" onclick="closeModal('addUserModal')">&times;</span>
+    <h2>Add New User</h2>
+    <form method="POST" action="{{ url_for('routes.add_user') }}">
+      <label>Username:</label><br>
+      <input type="text" name="username" required><br>
+      <label>Name:</label><br>
+      <input type="text" name="name" required><br>
+      <label>Email:</label><br>
+      <input type="email" name="email" required><br>
+      <label>Password:</label><br>
+      <input type="password" name="password" required><br>
+      <label>Role:</label><br>
+      <select name="role">
+        <option value="none">None</option>
+        <option value="admin">Admin</option>
+      </select><br><br>
+      <button type="submit" class="btn">Add User</button>
+    </form>
+  </div>
+</div>
+
+
+<div id="editUserModal" class="modal">
+  <div class="modal-content">
+    <span class="btn" onclick="closeModal('editUserModal')">&times;</span>
+    <h2>Edit User</h2>
+    <form method="POST" id="editUserForm">
+      <input type="hidden" name="user_id" id="editUserId">
+      <label>Username:</label><br>
+      <input type="text" name="username" id="editUsername" required><br>
+      <label>Name:</label><br>
+      <input type="text" name="name" id="editName" required><br>
+      <label>Email:</label><br>
+      <input type="email" name="email" id="editEmail" required><br>
+      <label>Role:</label><br>
+      <select name="role" id="editRole">
+        <option value="none">None</option>
+        <option value="admin">Admin</option>
+      </select><br><br>
+      <button type="submit" class="btn">Update User</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+function openEditModal(id, username, name, email, role) {
+  document.getElementById('editUserId').value = id;
+  document.getElementById('editUsername').value = username;
+  document.getElementById('editName').value = name;
+  document.getElementById('editEmail').value = email;
+  document.getElementById('editRole').value = role;
+  document.getElementById('editUserForm').action = `/admin/edit-user/${id}`;
+  openModal('editUserModal');
+}
+</script>
+
+{% include 'partials/footer.html' %}
 </body>
 </html>
