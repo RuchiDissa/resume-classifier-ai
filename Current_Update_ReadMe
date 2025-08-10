@@ -152,7 +152,7 @@ Addressed edge cases where no relevant roles were predicted, enhancing feedback 
 Fine-tuned the classification logic to better handle resumes with both general and domain-specific skills.
 Confirmed that predictions remain consistent regardless of resume format (PDF, DOCX, TXT), after extraction fixes.
 
-📅 07/08/2025 — Final Integration of Multi-Role Prediction
+📅 07/08/2025 — Integration of Multi-Role Prediction
 
 🚀 Multi-Role Prediction Integration
 Fully integrated the job role classifier into the system backend with support for top 3 role predictions.
@@ -164,3 +164,13 @@ Added fallback handling for unmatched resumes, ensuring graceful feedback when s
 🛠️ Bug Fixes & Testing
 Verified classifier compatibility with new resumes containing recently added skills.
 Confirmed extraction + classification flow works end-to-end from upload to role prediction.
+
+📅 08/08/2025 — Classifier Testing & Model Training
+
+🧪 Comprehensive Classifier Testing
+Tested the job role classifier using a wide range of resumes containing diverse skill sets.
+Verified prediction accuracy across different formats and varying skill completeness.
+🧠 Model Training & Accuracy Improvements
+Trained the classifier with updated and expanded datasets to improve prediction reliability.
+Refined confidence score calculations for more accurate representation of role prediction certainty.
+✅ Confirmed stability and improved accuracy after retraining with newly collected resume samples.
