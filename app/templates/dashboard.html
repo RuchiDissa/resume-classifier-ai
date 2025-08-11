@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 <header>
     {% include 'partials/navbar.html' %}
-  </header>
+</header>
+
 <main>
-<div class="container">
-    <h1 class="h1m">Dashboard</h1>
-    <h2>Welcome to Your AI Resume Classifier Dashboard</h2>
-    <p>This is where you can manage your resumes, view matched job roles, and track progress.</p>
-</div>
+    <div class="content-container">
+        <section class="section-header">
+            <h1>Dashboard</h1>
+            <h2>Welcome to Your AI Resume Classifier Dashboard</h2>
+            <p class="lead-text">
+                Manage your resumes, view matched job roles, and track progress efficiently from here.
+            </p>
+        </section>
 
-<div class="auth-container">
-    <!--<a href="/create_resume" class="btn">Create resume</a>-->
-    <a href="/upload" class="btn">Upload Resume</a>
-    <a href="{{ url_for('routes.job_matches') }}" class="btn">View Job Matches</a>
-    <a href="{{ url_for('auth.logout') }}" class="btn">Logout</a>
-</div>
-
-{% if session['role'] == 'admin' %}
-    <a href="{{ url_for('routes.admin_dashboard') }}" class="btn">Admin Panel</a>
-{% endif %}
+        <div class="button-group dashboard-buttons">
+            <!--<a href="/create_resume" class="btn btn-primary"><i class="fas fa-file-circle-plus"></i> Create Resume</a>-->
+            <a href="{{ url_for('routes.upload_resume') }}" class="btn btn-primary">
+                <i class="fas fa-upload"></i> Upload Resume
+            </a>
+            <a href="{{ url_for('routes.job_matches') }}" class="btn btn-primary">
+                <i class="fas fa-briefcase"></i> View Job Matches
+            </a>
+            <a href="{{ url_for('auth.logout') }}" class="btn btn-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+            {% if session['role'] == 'admin' %}
+                <a href="{{ url_for('routes.admin_dashboard') }}" class="btn btn-secondary">
+                    <i class="fas fa-user-shield"></i> Admin Panel
+                </a>
+            {% endif %}
+        </div>
+    </div>
 </main>
- {% include 'partials/footer.html' %}
+
+{% include 'partials/footer.html' %}
 </body>
 </html>
