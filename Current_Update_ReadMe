@@ -174,3 +174,18 @@ Verified prediction accuracy across different formats and varying skill complete
 Trained the classifier with updated and expanded datasets to improve prediction reliability.
 Refined confidence score calculations for more accurate representation of role prediction certainty.
 ✅ Confirmed stability and improved accuracy after retraining with newly collected resume samples.
+
+📅 11/08/2025 — Education & Experience Integration in Role Classification Page
+
+🛠 Backend Updates
+Updated /resume/classify-role/<filename> route to unpack and pass Education and Experience data from extract_education_experience() directly to the template.
+Fixed variable mismatch issue in the template by ensuring education and experience are available as separate variables instead of a combined tuple.
+Verified correct extraction of Education and Experience sections for varied resume formats (PDF, DOCX, TXT).
+🎨 Frontend & UI Enhancements
+Modified job_match_result.html to display Education and Experience in separate styled cards.
+Added scrollable container for the Experience card to handle long work histories without breaking page layout.
+Implemented custom scrollbar styling for a clean, modern look.
+✅ Testing & Validation
+Conducted functional testing to confirm Education and Experience sections appear correctly after job role classification.
+Tested scroll functionality with long experience content and verified smooth interaction.
+Confirmed that missing data shows a clear “No section found” message for both Education and Experience.
