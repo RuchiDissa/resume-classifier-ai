@@ -34,7 +34,7 @@ def extract_resume_text(filepath):
     else:
         raise ValueError("Unsupported file type. Only PDF, DOCX, and TXT are supported.")
 
-def extract_email(text):
+""" def extract_email(text):
     email_pattern = r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+'
     emails = re.findall(email_pattern, text)
     return emails[0] if emails else None
@@ -51,12 +51,10 @@ def extract_name(text):
     for line in lines:
         line = line.strip()
         if line and line.isalpha() and len(line.split()) <= 3:
-            return line  # Likely a name (simple heuristic)
-    return "Name not found"
-
+            return line
+    return "Name not found" """
 
 ExtractedInfo = namedtuple('ExtractedInfo', ['name', 'email', 'phone'])
-
 
 
 def extract_basic_info(text):
@@ -175,3 +173,4 @@ def extract_education_experience(text):
     experience_text = extract_sections_combined(exp_indices)
 
     return education_text.strip(), experience_text.strip()
+
