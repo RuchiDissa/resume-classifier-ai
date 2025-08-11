@@ -4,31 +4,100 @@
     <meta charset="UTF-8">
     <title>Job Match Result</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
 <header>
     {% include 'partials/navbar.html' %}
 </header>
+
 <main>
-<div class="auth-container">
-    <h1>Job Match Result</h1>
-    <p><strong>File:</strong> {{ filename }}</p>
-    <p><strong>Predicted Job Role:</strong> {{ predicted_role if predicted_role else "No match found" }}</p>
+    <div class="auth-container job-result-container">
+        <h1 class="page-title">Job Match Result</h1>
 
-    <h3>Matched Skills:</h3>
-    {% if matched_skills %}
-        <ul class="resume-list">
-            {% for skill in matched_skills %}
-                <li class="resume-item">{{ skill }}</li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No skills matched.</p>
-    {% endif %}
+        <div class="section-block">
+            <p><strong>File:</strong> <span class="file-name">{{ filename }}</span></p>
+        </div>
 
-    <a href="{{ url_for('routes.job_matches') }}" class="btn">← Back to Job Matches</a>
+        {% if extracted_info %}
+<div class="candidate-info">
+    <p><strong>Name:</strong> {{ extracted_info.name or 'Not Found' }}</p>
+    <p><strong>Email:</strong> {{ extracted_info.email or 'Not Found' }}</p>
+    <p><strong>Phone:</strong> {{ extracted_info.phone or 'Not Found' }}</p>
 </div>
+{% endif %}
+
+        {% if education or experience %}
+<div class="info-grid">
+
+  <!-- Education Card -->
+  <div class="info-card">
+    <h2 class="info-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+    {% if education %}
+      <div class="info-content">{{ education }}</div>
+    {% else %}
+      <p class="info-empty"><em>No education section found.</em></p>
+    {% endif %}
+  </div>
+
+  <!-- Experience Card (scrollable) -->
+  <div class="info-card scroll-card">
+    <h2 class="info-title"><i class="fas fa-briefcase"></i> Experience</h2>
+    {% if experience %}
+      <div class="info-content scrollable">{{ experience }}</div>
+    {% else %}
+      <p class="info-empty"><em>No experience section found.</em></p>
+    {% endif %}
+  </div>
+
+</div>
+{% endif %}
+
+
+        <h1>Job Match Results for: {{ filename }}</h1>
+
+        <div class="section-block">
+            <h2 class="section-title">Top Matching Job Roles</h2>
+            {% if top_roles %}
+                <ul class="resume-list match-list">
+                    {% for role, prob in top_roles %}
+                        <li class="resume-item">
+                            <i class="fas fa-briefcase"></i> <strong>{{ role }}</strong> — Confidence: {{ (prob * 100) | round(2) }}%
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="no-match-text">No match found.</p>
+            {% endif %}
+        </div>
+
+        <div class="section-block">
+            <h2 class="section-title">Matched Skills</h2>
+            {% if matched_skills %}
+                <ul class="resume-list skill-list">
+                    {% for skill in matched_skills %}
+                        <li class="resume-item">
+                            <i class="fas fa-check-circle"></i> {{ skill }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="no-match-text">No skills matched.</p>
+            {% endif %}
+        </div>
+
+        <div class="resume-menu">
+            <a href="{{ url_for('routes.job_matches') }}" class="btn btn-outline">
+                ⬅️ Back to Job Matches
+            </a>
+        </div>
+    </div>
 </main>
-{% include 'partials/footer.html' %}
+
+<footer>
+    {% include 'partials/footer.html' %}
+</footer>
+
 </body>
 </html>
