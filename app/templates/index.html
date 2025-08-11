@@ -5,28 +5,41 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<body>
+<body class="index-body">
 <header>
     {% include 'partials/navbar.html' %}
-  </header>
-<main>
-<div class="container">
-    <h1 class="h1m">Welcome</h1>
-    <h1>AI Resume Classifier and Job Role Matcher</h1>
-    <p>This AI-powered system is designed to intelligently analyze resumes, extract critical information such as skills,
-        qualifications, and professional experience, and accurately match candidates to the most relevant job roles. By
-        leveraging advanced machine learning and natural language processing techniques, the tool streamlines the recruitment
-        process, enhances decision-making for HR teams, and ensures efficient and accurate candidate-role alignment.</p>
+</header>
 
-    <img src="{{ url_for('static', filename='images/welcome.png') }}" alt="Welcome Image" class="welcome-img">
-</div>
-<div class="auth-container">
-    <h2>Login to your account</h2>
-    <a href="/login" class="btn">Login</a>
-    <h2>Register here if you do not have account</h2>
-    <a href="/register" class="btn">Register</a>
-</div>
+<main class="index-main">
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1 class="welcome-heading">Welcome</h1>
+            <h2 class="project-title">AI Resume Classifier and Job Role Matcher</h2>
+            <p class="project-description">
+                This AI-powered system intelligently analyzes resumes, extracts critical information such as skills,
+                qualifications, and professional experience, and matches candidates to the most relevant job roles.
+                By leveraging advanced machine learning and natural language processing techniques, it streamlines recruitment,
+                enhances decision-making for HR teams, and ensures efficient candidate-role alignment.
+            </p>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/welcome.png') }}" alt="Welcome Image">
+        </div>
+    </section>
+
+    <section class="auth-section">
+    <div class="auth-box login-box">
+        <h2>Login to Your Account</h2>
+        <a href="/login" class="auth-btn">Login</a>
+    </div>
+    <div class="auth-box register-box">
+        <h2>Register if You Don't Have an Account</h2>
+        <a href="/register" class="auth-btn">Register</a>
+    </div>
+</section>
+
 </main>
- {% include 'partials/footer.html' %}
+
+{% include 'partials/footer.html' %}
 </body>
 </html>
