@@ -9,30 +9,44 @@
 <header>
     {% include 'partials/navbar.html' %}
 </header>
+
 <main>
-    <div class="auth-container">
-    <h1>Your Uploaded Resumes</h1>
+    <div class="content-container">
+        <section class="section-header">
+            <h1>Your Uploaded Resumes</h1>
+        </section>
 
-    {% if files %}
-        <ul class="resume-list">
-        {% for file in files %}
-            <li class="resume-item">
-                {{ file }}
-                <a href="{{ url_for('routes.classify_role', filename=file) }}" class="btn">🔎 Analyze Info</a>
+        {% if files %}
+            <ul class="resume-list">
+                {% for file in files %}
+                <li class="resume-item">
+                    <span class="file-name">{{ file }}</span>
+                    <div class="btn-group">
+                        <a href="{{ url_for('routes.classify_role', filename=file) }}" class="btn btn-primary">
+                            <i class="fas fa-search"></i> 🔍 Analyze Info
+                        </a>
+                        <a href="{{ url_for('routes.delete_resume', filename=file) }}" class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i> 🗑️ Delete
+                        </a>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="info-text">No resumes uploaded yet.</p>
+        {% endif %}
 
-                <a href="{{ url_for('routes.delete_resume', filename=file) }}" class="btn">🗑️ Delete</a>
-            </li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No resumes uploaded yet.</p>
-    {% endif %}
-
-    <a href="{{ url_for('routes.upload_resume') }}" class="btn">Upload Another Resume</a>
-
-    <a href="{{ url_for('routes.dashboard') }}" class="btn">← Back to Dashboard</a>
-</div>
+        <div class="button-group">
+            <a href="{{ url_for('routes.upload_resume') }}" class="btn btn-secondary">
+                <i class="fas fa-upload"></i> ⬅️ Upload Another Resume
+            </a>
+            <a href="{{ url_for('routes.dashboard') }}" class="btn btn-outline">
+                <i class="fas fa-arrow-left"></i> ⬅️ Back to Dashboard
+            </a>
+        </div>
+    </div>
 </main>
+
 {% include 'partials/footer.html' %}
 </body>
 </html>
