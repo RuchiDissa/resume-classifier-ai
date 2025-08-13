@@ -119,54 +119,52 @@ python train_education_classifier.py
 
 ## 📸 Snapshots
 
-### 🏠 Homepage Interface
-<img width="827" height="913" alt="Screenshot 2025-07-31 132311" src="https://github.com/user-attachments/assets/9c13e475-e6d5-43ba-bd1e-deca03e8de75" />
-<img width="838" height="869" alt="Screenshot 2025-07-31 132331" src="https://github.com/user-attachments/assets/0d8e05dd-5e4a-4d9c-87e1-6ec9d6c3ace9" />
+<div align="center">
 
+### Homepage
+<img src="https://github.com/user-attachments/assets/4c7ad4e8-963c-4685-8c4d-43c63fae5a90" width="300px" />
 
-### 🔐 Login Page
-<img width="804" height="822" alt="Screenshot 2025-07-31 131835" src="https://github.com/user-attachments/assets/5ed88aa1-45cf-4246-9325-b3d0d1730f46" />
+### Login
+<img src="https://github.com/user-attachments/assets/d8c7820f-8e41-480c-b8fb-65d73427a71a" width="300px" />
 
+### Register
+<img src="https://github.com/user-attachments/assets/b182201e-2e61-405a-8883-17f6331f956f" width="300px" />
 
-### 📝 Register Page
-<img width="817" height="877" alt="Screenshot 2025-07-31 134410" src="https://github.com/user-attachments/assets/dd16a15d-3312-44d7-bfca-a6d829b8b269" />
+### Dashboard
+<img src="https://github.com/user-attachments/assets/6b6e0dec-c728-497b-8b9c-d0f839cab1a6" width="300px" />
 
+### Upload Files
+<img src="https://github.com/user-attachments/assets/e21dbabe-6d9c-44f0-bbe1-81de6b5804ac" width="300px" />
 
-### 📊 User Dashboard
-<img width="827" height="899" alt="Screenshot 2025-07-31 131931" src="https://github.com/user-attachments/assets/b78f7182-c9a4-4216-83ba-4b8e793d4cdc" />
+### Extract Text from Upload
+<img src="https://github.com/user-attachments/assets/39df2106-2bed-4889-8ece-67b90082aedf" width="300px" />
 
+### Job Match Page
+<img src="https://github.com/user-attachments/assets/6fb94bee-ceae-42dc-bfd0-efcc18737d16" width="300px" />
 
-### 📤 Resume Upload Page
-<img width="815" height="594" alt="Screenshot 2025-07-31 131944" src="https://github.com/user-attachments/assets/8733754d-1d6d-4071-84e8-deb1977d8a76" />
+### Skills Classifier Result
+<img src="https://github.com/user-attachments/assets/36ce0970-34f1-456b-9b9d-6bbe957b8961" width="300px" />
 
+### Experience Classifier Result
+<img src="https://github.com/user-attachments/assets/af720a25-a37f-40e0-ad9e-d2a26fb830a7" width="300px" />
 
-### 📄 Uploaded Resumes List
-<img width="814" height="718" alt="Screenshot 2025-07-31 132008" src="https://github.com/user-attachments/assets/2bc1b547-5e41-4f72-b409-8e554993e8bf" />
+### Education Classifier Result
+<img src="https://github.com/user-attachments/assets/db147b08-a346-4607-b041-1e613a2348a9" width="300px" />
 
+### Admin Dashboard
+<img src="https://github.com/user-attachments/assets/a1366c94-ebd3-4ae4-a5c0-9b9782555a45" width="300px" />
 
-### 🔎 Extracted Resume Text
-<img width="544" height="915" alt="Screenshot 2025-07-31 132047" src="https://github.com/user-attachments/assets/32261954-c18d-413d-9f8a-a7d34a8a2d17" />
+### Admin Panel
+<img src="https://github.com/user-attachments/assets/21aefc49-5c8a-4021-9f11-8564f7dbe95f" width="300px" />
 
+### Update User
+<img src="https://github.com/user-attachments/assets/84149209-619b-49c2-89d6-c07e6fc42587" width="300px" />
 
-### 📧 Extracted Contact Info
-<img width="766" height="569" alt="Screenshot 2025-07-31 132107" src="https://github.com/user-attachments/assets/56d08d46-de97-412d-bb28-c8bd54244869" />
+### Add User
+<img src="https://github.com/user-attachments/assets/edff6549-6839-41a1-b839-602a47884f7a" width="300px" />
 
+### Edit User
+<img src="https://github.com/user-attachments/assets/dedc921b-35f2-464e-8070-4d0924955369" width="300px" />
 
-### 🧠 Resume Skill Analysis
-<img width="773" height="635" alt="Screenshot 2025-07-31 132116" src="https://github.com/user-attachments/assets/7adcfb96-24a1-4cb3-8c8d-ef9f4f9b135a" />
+</div>
 
-### 🎓 Education & Experience Sections
-<img width="773" height="804" alt="Screenshot 2025-07-31 132254" src="https://github.com/user-attachments/assets/c8df96af-038b-4de1-a0b8-ef4315766cbe" />
-
-
-### ⚙️ Admin Panel - User Management
-<img width="839" height="869" alt="Screenshot 2025-07-31 134031" src="https://github.com/user-attachments/assets/681e9b29-a2e9-4687-9816-cf02df82844c" />
-
-
-### 🗂️ Edit User Interface
-<img width="832" height="909" alt="Screenshot 2025-07-31 134926" src="https://github.com/user-attachments/assets/dd7f08a9-eefb-4f27-b123-dc5829d5218a" />
-
-### ➕ Add User Interface
-<img width="817" height="896" alt="Screenshot 2025-07-31 134945" src="https://github.com/user-attachments/assets/f2dd283f-80d8-42f7-be60-fa87e572ca5b" />
-
----
