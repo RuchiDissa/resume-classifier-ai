@@ -63,40 +63,6 @@ This repository includes **training scripts** to demonstrate the model-building 
 Real datasets and production-trained models are not included for privacy.  
 A small synthetic dataset is provided for demonstration purposes.
 
-### 🛠️ Training Commands
-
-```bash
-# Train Skill Classifier
-python train_skill_classifier.py
-
-# Train Education Classifier
-python train_education_classifier.py
-
-# Train Experience Classifier
-python train_experience_classifier.py
-
-1. Skills CSV (skills.csv)
-
-| timestamp        | skill  | job\_role         |
-| ---------------- | ------ | ----------------- |
-| 2025-08-13 10:00 | Python | Software Engineer |
-| 2025-08-13 10:05 | SQL    | Data Analyst      |
-
-2. Education CSV (education.csv)
-
-| timestamp        | education                | job\_role         |
-| ---------------- | ------------------------ | ----------------- |
-| 2025-08-13 10:00 | BSc Computer Engineering | Software Engineer |
-| 2025-08-13 10:05 | MSc Data Science         | Data Analyst      |
-
-3. Experience CSV (experience.csv)
-
-| timestamp        | experience                | job\_role         |
-| ---------------- | ------------------------- | ----------------- |
-| 2025-08-13 10:00 | 3 years Software Engineer | Software Engineer |
-| 2025-08-13 10:05 | 2 years Data Analyst      | Data Analyst      |
-
-All CSVs should have headers and be UTF-8 encoded. These files will be read by the training scripts to build the respective classifiers.
 
 ## 📸 Project Snapshots
 
