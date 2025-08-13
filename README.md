@@ -98,7 +98,7 @@ python train_experience_classifier.py
 
 All CSVs should have headers and be UTF-8 encoded. These files will be read by the training scripts to build the respective classifiers.
 
-## 📸 Snapshots
+📸 Snapshots
 
-### Homepage
+Homepage
 ![homepage](https://github.com/user-attachments/assets/bc91f1dd-3b85-434f-a1bf-3b39d2306fb5)
