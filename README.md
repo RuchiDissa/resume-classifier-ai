@@ -100,22 +100,48 @@ All CSVs should have headers and be UTF-8 encoded. These files will be read by t
 
 ## 📸 Project Snapshots
 
-Below are some screenshots from **Resume Classifier AI**:
+### Homepage
+![Homepage](snapshots/homepage.jpeg)
 
-| Screenshot | Preview |
-|------------|---------|
-| **Homepage** | ![Homepage](snapshots/homepage.jpeg) |
-| **Login Page** | ![Login](snapshots/login.jpeg) |
-| **Register Page** | ![Register](snapshots/register.jpeg) |
-| **Admin Dashboard** | ![Admin Dashboard](snapshots/admin_dashboard.jpeg) |
-| **Dashboard** | ![Dashboard](snapshots/dashborad.jpeg) |
-| **Add User** | ![Add User](snapshots/add_user.jpeg) |
-| **Edit User** | ![Edit User](snapshots/edit_user.jpeg) |
-| **Update User** | ![Update User](snapshots/update_user.jpeg) |
-| **Job Match Page** | ![Job Match Page](snapshots/job_match_page.jpeg) |
-| **Extract Text from Upload** | ![Extract Text Upload File](snapshots/extract_text_upload_file.jpeg) |
-| **Education Classifier Results** | ![Education Classifier Result](snapshots/education_classier_result.jpeg) |
-| **Experience Classifier Results** | ![Experience Classifier Result](snapshots/experience_classifier_results.jpeg) |
-| **Skills Classifier Results** | ![Skills Classifier Result](snapshots/skills_classifier_result.jpeg) |
-| **Upload Files** | ![Upload Files](snapshots/uploadFiles.jpeg) |
-| **Admin Panel** | ![Admin Panel](snapshots/admin_panel.jpeg) |
+### Login Page
+![Login Page](snapshots/login.jpeg)
+
+### Register Page
+![Register Page](snapshots/register.jpeg)
+
+### Admin Dashboard
+![Admin Dashboard](snapshots/admin_dashboard.jpeg)
+
+### Dashboard
+![Dashboard](snapshots/dashborad.jpeg)
+
+### Add User
+![Add User](snapshots/add_user.jpeg)
+
+### Edit User
+![Edit User](snapshots/edit_user.jpeg)
+
+### Update User
+![Update User](snapshots/update_user.jpeg)
+
+### Job Match Page
+![Job Match Page](snapshots/job_match_page.jpeg)
+
+### Extract Text from Upload
+![Extract Text Upload File](snapshots/extract_text_upload_file.jpeg)
+
+### Education Classifier Results
+![Education Classifier Result](snapshots/education_classier_result.jpeg)
+
+### Experience Classifier Results
+![Experience Classifier Result](snapshots/experience_classifier_results.jpeg)
+
+### Skills Classifier Results
+![Skills Classifier Result](snapshots/skills_classifier_result.jpeg)
+
+### Upload Files
+![Upload Files](snapshots/uploadFiles.jpeg)
+
+### Admin Panel
+![Admin Panel](snapshots/admin_panel.jpeg)
+
