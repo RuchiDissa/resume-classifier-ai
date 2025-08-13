@@ -54,6 +54,18 @@ Now enhanced with:
 5. **Results Displayed** in the web interface.
 
 ---
+## 📚 Training the Classifier
+
+This repository includes **training scripts** to demonstrate the model-building process.
+
+⚠️ **Note:**  
+Real datasets and production-trained models are not included for privacy.  
+A small synthetic dataset is provided for demonstration purposes.
+
+### Steps:
+```bash
+python train_classifier.py
+
 
 ## 📸 Snapshots
 
