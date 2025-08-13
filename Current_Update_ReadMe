@@ -204,3 +204,24 @@ Resolved CSS alignment issues in classifier result cards on mobile and tablet vi
 Updated spacing and padding for better readability in the job match results page.
 Unified font sizes and styles across classifier outputs for a cleaner look.
 Adjusted responsive layouts to ensure matched skills, education, and experience sections display consistently across devices
+
+📅 13/08/2025 — Experience Classifier Development & Integration:
+
+🧠 Designed and developed the Experience Classifier model
+🛠️ Trained the classifier using expanded and cleaned experience dataset
+🔗 Integrated the Experience Classifier into the backend system routes
+🎨 Updated frontend to display experience-based job role predictions and confidence scores
+🧪 Tested end-to-end workflow with various resume formats (PDF, DOCX, TXT)
+🐞 Fixed bugs related to experience section extraction and classification display
+✅ Validated improved accuracy and seamless user interaction on the Experience classification page
+
+📅 14/08/2025 — Education Classifier Finalization & System Integration:
+
+🧠 Finalized the Education Classifier model design and dataset preparation
+🛠️ Retrained the Education Classifier with extended education data for accuracy improvement
+🔗 Integrated education classification routes and backend logic with existing system
+🎨 Enhanced frontend UI to present education-based classification alongside experience results
+🧪 Conducted comprehensive testing for multi-classifier output consistency and correctness
+⚙️ Improved confidence scoring and display formatting for clearer user feedback
+✅ Ensured smooth integration of Education Classifier with job role prediction pipeline
+
