@@ -63,7 +63,7 @@ This repository includes **training scripts** to demonstrate the model-building 
 Real datasets and production-trained models are not included for privacy.  
 A small synthetic dataset is provided for demonstration purposes.
 
-### 🛠️ Training Commands
+🛠️ Training Commands
 
 ```bash
 # Train Skill Classifier
