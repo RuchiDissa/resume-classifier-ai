@@ -54,7 +54,8 @@ Now enhanced with:
 5. **Results Displayed** in the web interface.
 
 ---
-## 📚 Training the Classifier
+
+## 📚 Training the Classifiers
 
 This repository includes **training scripts** to demonstrate the model-building process.
 
@@ -62,10 +63,59 @@ This repository includes **training scripts** to demonstrate the model-building 
 Real datasets and production-trained models are not included for privacy.  
 A small synthetic dataset is provided for demonstration purposes.
 
-### Steps:
-```bash
-python train_classifier.py
+### 📂 Dataset Structure
 
+To recreate the training data, structure your CSVs as follows:
+
+1. **Skills CSV (`skills.csv`)**
+
+| timestamp           | skill   | job_role          |
+|-------------------|--------|-----------------|
+| 2025-08-13 10:00  | Python | Software Engineer |
+| 2025-08-13 10:05  | SQL    | Data Analyst      |
+
+- **Columns:**  
+  - `timestamp`: When the skill data was recorded.  
+  - `skill`: The skill keyword or phrase.  
+  - `job_role`: The job role associated with the skill.
+
+2. **Education CSV (`education.csv`)**
+
+| timestamp           | education                  | job_role          |
+|-------------------|----------------------------|-----------------|
+| 2025-08-13 10:00  | BSc Computer Engineering  | Software Engineer |
+| 2025-08-13 10:05  | MSc Data Science          | Data Analyst      |
+
+- **Columns:**  
+  - `timestamp`: When the education data was recorded.  
+  - `education`: Degree or certification name.  
+  - `job_role`: The job role associated with this education.
+
+3. **Experience CSV (`experience.csv`)**
+
+| timestamp           | experience           | job_role          |
+|-------------------|--------------------|-----------------|
+| 2025-08-13 10:00  | 3 years Software Engineer | Software Engineer |
+| 2025-08-13 10:05  | 2 years Data Analyst      | Data Analyst      |
+
+- **Columns:**  
+  - `timestamp`: When the experience data was recorded.  
+  - `experience`: Job experience description or duration.  
+  - `job_role`: The job role associated with the experience.
+
+> All CSVs should have headers and be UTF-8 encoded. These files will be read by the training scripts to build the respective classifiers.
+
+---
+
+### 🛠️ 1. Train the **Skill Classifier**
+```bash
+python train_skill_classifier.py
+### 🛠️ 2. Train the **Education Classifier**
+```bash
+python train_education_classifier.py
+### 🛠️ 3. Train the **Experience Classifier**
+```bash
+python train_education_classifier.py
 
 ## 📸 Snapshots
 
