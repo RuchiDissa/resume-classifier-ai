@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Job Role Classification Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+</head>
+<body>
+
+<header>
+    {% include 'partials/navbar.html' %}
+</header>
+
+<main>
+    <div class="auth-container job-result-container">
+        <h1 class="page-title">Job Role Classification Result</h1>
+
+        <div class="section-block">
+            <p><strong>Uploaded File:</strong> <span class="file-name">{{ filename }}</span></p>
+        </div>
+
+        {% if classification_type %}
+        <div class="section-block">
+            <p><strong>Classification Type:</strong> {{ classification_type }}</p>
+        </div>
+        {% endif %}
+
+        <div class="section-block">
+            <h2 class="section-title">Top Predicted Job Roles</h2>
+            {% if top_roles %}
+            <ul class="resume-list match-list">
+                {% for role, prob in top_roles %}
+                <li class="resume-item">
+                    <i class="fas fa-briefcase"></i> <strong>{{ role }}</strong> — Confidence: {{ (prob * 100) | round(2) }}%
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p class="no-match-text">No job role predictions available.</p>
+            {% endif %}
+        </div>
+
+
+<div class="resume-menu" style="margin-top: 20px;">
+    <a href="{{ url_for('routes.classify_role', filename=filename) }}" class="btn btn-outline">
+        ⬅️ Back to Classifier
+    </a>
+</div>
+
+    </div>
+</main>
+
+<footer>
+    {% include 'partials/footer.html' %}
+</footer>
+
+<script>
+function toggleSkills() {
+    const collapseDiv = document.getElementById('skills-collapse');
+    collapseDiv.style.display = collapseDiv.style.display === 'none' ? 'block' : 'none';
+}
+</script>
+
+</body>
+</html>
