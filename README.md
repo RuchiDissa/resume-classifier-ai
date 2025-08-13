@@ -117,6 +117,7 @@ python train_education_classifier.py
 ```bash
 python train_education_classifier.py
 
+---
 ## 📸 Snapshots
 
 <div align="center">
