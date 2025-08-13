@@ -97,3 +97,36 @@ python train_experience_classifier.py
 | 2025-08-13 10:05 | 2 years Data Analyst      | Data Analyst      |
 
 All CSVs should have headers and be UTF-8 encoded. These files will be read by the training scripts to build the respective classifiers.
+
+📸 Snapshots
+
+Homepage
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/4c7ad4e8-963c-4685-8c4d-43c63fae5a90.png" width="300px" alt="Homepage">
+Login
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/d8c7820f-8e41-480c-b8fb-65d73427a71a.png" width="300px" alt="Login">
+Register
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/b182201e-2e61-405a-8883-17f6331f956f.png" width="300px" alt="Register">
+Dashboard
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/6b6e0dec-c728-497b-8b9c-d0f839cab1a6.png" width="300px" alt="Dashboard">
+Upload Files
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/e21dbabe-6d9c-44f0-bbe1-81de6b5804ac.png" width="300px" alt="Upload Files">
+Extract Text from Upload
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/39df2106-2bed-4889-8ece-67b90082aedf.png" width="300px" alt="Extract Text">
+Job Match Page
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/6fb94bee-ceae-42dc-bfd0-efcc18737d16.png" width="300px" alt="Job Match">
+Skills Classifier Result
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/36ce0970-34f1-456b-9b9d-6bbe957b8961.png" width="300px" alt="Skills Classifier">
+Experience Classifier Result
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/af720a25-a37f-40e0-ad9d-d2a26fb830a7.png" width="300px" alt="Experience Classifier">
+Education Classifier Result
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/db147b08-a346-4607-b041-1e613a2348a9.png" width="300px" alt="Education Classifier">
+Admin Dashboard
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/a1366c94-ebd3-4ae4-a5c0-9b9782555a45.png" width="300px" alt="Admin Dashboard">
+Admin Panel
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/21aefc49-5c8a-4021-9f11-8564f7dbe95f.png" width="300px" alt="Admin Panel">
+Update User
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/84149209-619b-49c2-89d6-c07e6fc42587.png" width="300px" alt="Update User">
+Add User
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/edff6549-6839-41a1-b839-602a47884f7a.png" width="300px" alt="Add User">
+Edit User
+<img src="https://raw.githubusercontent.com/RuchiDissa/resume-classifier-ai/main/assets/dedc921b-35f2-464e-8070-4d0924955369.png" width="300px" alt="Edit User">
