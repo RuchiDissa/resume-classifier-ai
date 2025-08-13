@@ -121,68 +121,49 @@ To recreate the training data, structure your CSVs as follows:
 
 ## 📸 Snapshots
 
-<div align="center">
-
 ### Homepage
-<img src="https://github.com/user-attachments/assets/4c7ad4e8-963c-4685-8c4d-43c63fae5a90" width="300px" />
-<br><br>
+![Homepage](https://raw.githubusercontent.com/<username>/<repo>/main/assets/4c7ad4e8-963c-4685-8c4d-43c63fae5a90)
 
 ### Login
-<img src="https://github.com/user-attachments/assets/d8c7820f-8e41-480c-b8fb-65d73427a71a" width="300px" />
-<br><br>
+![Login](https://raw.githubusercontent.com/<username>/<repo>/main/assets/d8c7820f-8e41-480c-b8fb-65d73427a71a)
 
 ### Register
-<img src="https://github.com/user-attachments/assets/b182201e-2e61-405a-8883-17f6331f956f" width="300px" />
-<br><br>
+![Register](https://raw.githubusercontent.com/<username>/<repo>/main/assets/b182201e-2e61-405a-8883-17f6331f956f)
 
 ### Dashboard
-<img src="https://github.com/user-attachments/assets/6b6e0dec-c728-497b-8b9c-d0f839cab1a6" width="300px" />
-<br><br>
+![Dashboard](https://raw.githubusercontent.com/<username>/<repo>/main/assets/6b6e0dec-c728-497b-8b9c-d0f839cab1a6)
 
 ### Upload Files
-<img src="https://github.com/user-attachments/assets/e21dbabe-6d9c-44f0-bbe1-81de6b5804ac" width="300px" />
-<br><br>
+![Upload Files](https://raw.githubusercontent.com/<username>/<repo>/main/assets/e21dbabe-6d9c-44f0-bbe1-81de6b5804ac)
 
 ### Extract Text from Upload
-<img src="https://github.com/user-attachments/assets/39df2106-2bed-4889-8ece-67b90082aedf" width="300px" />
-<br><br>
+![Extract Text](https://raw.githubusercontent.com/<username>/<repo>/main/assets/39df2106-2bed-4889-8ece-67b90082aedf)
 
 ### Job Match Page
-<img src="https://github.com/user-attachments/assets/6fb94bee-ceae-42dc-bfd0-efcc18737d16" width="300px" />
-<br><br>
+![Job Match](https://raw.githubusercontent.com/<username>/<repo>/main/assets/6fb94bee-ceae-42dc-bfd0-efcc18737d16)
 
 ### Skills Classifier Result
-<img src="https://github.com/user-attachments/assets/36ce0970-34f1-456b-9b9d-6bbe957b8961" width="300px" />
-<br><br>
+![Skills Classifier](https://raw.githubusercontent.com/<username>/<repo>/main/assets/36ce0970-34f1-456b-9b9d-6bbe957b8961)
 
 ### Experience Classifier Result
-<img src="https://github.com/user-attachments/assets/af720a25-a37f-40e0-ad9d-d2a26fb830a7" width="300px" />
-<br><br>
+![Experience Classifier](https://raw.githubusercontent.com/<username>/<repo>/main/assets/af720a25-a37f-40e0-ad9d-d2a26fb830a7)
 
 ### Education Classifier Result
-<img src="https://github.com/user-attachments/assets/db147b08-a346-4607-b041-1e613a2348a9" width="300px" />
-<br><br>
+![Education Classifier](https://raw.githubusercontent.com/<username>/<repo>/main/assets/db147b08-a346-4607-b041-1e613a2348a9)
 
 ### Admin Dashboard
-<img src="https://github.com/user-attachments/assets/a1366c94-ebd3-4ae4-a5c0-9b9782555a45" width="300px" />
-<br><br>
+![Admin Dashboard](https://raw.githubusercontent.com/<username>/<repo>/main/assets/a1366c94-ebd3-4ae4-a5c0-9b9782555a45)
 
 ### Admin Panel
-<img src="https://github.com/user-attachments/assets/21aefc49-5c8a-4021-9f11-8564f7dbe95f" width="300px" />
-<br><br>
+![Admin Panel](https://raw.githubusercontent.com/<username>/<repo>/main/assets/21aefc49-5c8a-4021-9f11-8564f7dbe95f)
 
 ### Update User
-<img src="https://github.com/user-attachments/assets/84149209-619b-49c2-89d6-c07e6fc42587" width="300px" />
-<br><br>
+![Update User](https://raw.githubusercontent.com/<username>/<repo>/main/assets/84149209-619b-49c2-89d6-c07e6fc42587)
 
 ### Add User
-<img src="https://github.com/user-attachments/assets/edff6549-6839-41a1-b839-602a47884f7a" width="300px" />
-<br><br>
+![Add User](https://raw.githubusercontent.com/<username>/<repo>/main/assets/edff6549-6839-41a1-b839-602a47884f7a)
 
 ### Edit User
-<img src="https://github.com/user-attachments/assets/dedc921b-35f2-464e-8070-4d0924955369" width="300px" />
-<br><br>
-
-</div>
+![Edit User](https://raw.githubusercontent.com/<username>/<repo>/main/assets/dedc921b-35f2-464e-8070-4d0924955369)
 
 
