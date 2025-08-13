@@ -144,3 +144,5 @@ All CSVs should have headers and be UTF-8 encoded. These files will be read by t
 ### Admin Panel
 ![Admin Panel](snapshots/admin_panel.jpeg)
 
+### Edit resume text
+![Edit_resume_text](snapshots/edit_resume_text.jpeg)
