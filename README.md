@@ -1,21 +1,34 @@
 # Resume Classifier AI
-AI-powered tool to extract and classify resumes into job roles
 
-# 🧠 AI-Based Resume Classifier and Job Role Matcher
+AI-powered tool to extract and classify resumes into job roles.
+
+---
+
+## 🧠 AI-Based Resume Classifier and Job Role Matcher
 
 This project is part of my internship at **Bitzify**, focused on developing an AI-powered tool that analyzes resumes, extracts relevant information using NLP, and classifies them into the most suitable job roles.
+
+Now enhanced with:
+- **Skill Extraction Classifier** — Detects and lists key skills from resumes.
+- **Education Classifier** — Extracts educational qualifications and levels.
+- **Experience Classifier** — Extracts relevant work experience.
+- **Job Role Matching** — Matches extracted skills, education, and experience to the most relevant job roles.
 
 ---
 
 ## 🚀 Features
 
-- 📄 Upload resumes in PDF, DOCX, or TXT format
-- 🧠 Automatically extract key information (skills, education, experience)
-- 🔍 Extract contact details: Name, Email, Phone
-- 🌐 Simple, responsive web interface
-- ⚡ Fast backend response (< 2 seconds)
-- 👨‍💼 Admin panel for user management (add/edit/delete/block users)
-- 📥 Secure file handling with dynamic resume analysis
+- 📄 Upload resumes in PDF, DOCX, or TXT format.
+- 🧠 Automatically extract:
+  - Skills
+  - Education
+  - Work experience
+- 🎯 Match candidates to job roles using classification logic.
+- 🔍 Extract contact details: Name, Email, Phone.
+- 🌐 Simple, responsive web interface.
+- ⚡ Fast backend response (< 2 seconds).
+- 👨‍💼 Admin panel for user management (add/edit/delete/block users).
+- 📥 Secure file handling with dynamic resume analysis.
 
 ---
 
@@ -26,6 +39,19 @@ This project is part of my internship at **Bitzify**, focused on developing an A
 - **Machine Learning:** Scikit-learn
 - **NLP:** spaCy, NLTK
 - **Resume Parsing:** PyMuPDF, pdfminer.six, python-docx
+
+---
+
+## 📌 Project Workflow
+
+1. **User Uploads Resume** → PDF/DOCX/TXT.
+2. **NLP Processing** → Extracts text, contact info, skills, education, and experience.
+3. **Classification Models**:
+   - Skill classifier matches keywords against a pre-trained skill database.
+   - Education classifier detects degree and field of study.
+   - Experience classifier identifies job titles and years of experience.
+4. **Job Role Matching** → Combines extracted data to recommend suitable job roles.
+5. **Results Displayed** in the web interface.
 
 ---
 
