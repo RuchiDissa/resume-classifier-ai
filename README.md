@@ -63,16 +63,15 @@ This repository includes **training scripts** to demonstrate the model-building 
 Real datasets and production-trained models are not included for privacy.  
 A small synthetic dataset is provided for demonstration purposes.
 
-🛠️ Training Commands
+**🛠️ Training Commands**
 
-bash
-Train Skill Classifier
+**Train Skill Classifier :** 
 python train_skill_classifier.py
 
-Train Education Classifier
+**Train Education Classifier :** 
 python train_education_classifier.py
 
-Train Experience Classifier
+**Train Experience Classifier :**
 python train_experience_classifier.py
 
 1. Skills CSV (skills.csv)
