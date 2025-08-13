@@ -63,6 +63,20 @@ This repository includes **training scripts** to demonstrate the model-building 
 Real datasets and production-trained models are not included for privacy.  
 A small synthetic dataset is provided for demonstration purposes.
 
+---
+
+### 🛠️ 1. Train the **Skill Classifier**
+```bash
+python train_skill_classifier.py
+### 🛠️ 2. Train the **Education Classifier**
+```bash
+python train_education_classifier.py
+### 🛠️ 3. Train the **Experience Classifier**
+```bash
+python train_education_classifier.py
+
+---
+
 ### 📂 Dataset Structure
 
 To recreate the training data, structure your CSVs as follows:
@@ -105,19 +119,6 @@ To recreate the training data, structure your CSVs as follows:
 
 > All CSVs should have headers and be UTF-8 encoded. These files will be read by the training scripts to build the respective classifiers.
 
----
-
-### 🛠️ 1. Train the **Skill Classifier**
-```bash
-python train_skill_classifier.py
-### 🛠️ 2. Train the **Education Classifier**
-```bash
-python train_education_classifier.py
-### 🛠️ 3. Train the **Experience Classifier**
-```bash
-python train_education_classifier.py
-
----
 ## 📸 Snapshots
 
 <div align="center">
