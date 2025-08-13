@@ -97,8 +97,3 @@ python train_experience_classifier.py
 | 2025-08-13 10:05 | 2 years Data Analyst      | Data Analyst      |
 
 All CSVs should have headers and be UTF-8 encoded. These files will be read by the training scripts to build the respective classifiers.
-
-📸 Snapshots
-
-Homepage
-![homepage](https://github.com/user-attachments/assets/bc91f1dd-3b85-434f-a1bf-3b39d2306fb5)
