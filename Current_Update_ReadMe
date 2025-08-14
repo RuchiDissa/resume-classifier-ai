@@ -225,3 +225,16 @@ Adjusted responsive layouts to ensure matched skills, education, and experience 
 ⚙️ Improved confidence scoring and display formatting for clearer user feedback
 ✅ Ensured smooth integration of Education Classifier with job role prediction pipeline
 
+📅 15/08/2025 — Reporting Tools & PDF Download Implementation:
+
+🛠️ Frontend Enhancements
+Developed candidate report page (report_result.html) to display extracted resume information in a professional layout
+Applied new CSS styles for report sections, lists, and highlights to improve readability and visual appeal
+Integrated combined job role prediction showing top 3 roles only with normalized confidence percentages
+Added “📥 Download PDF” button at the bottom of the report page for user convenience
+
+🛠️ Backend Implementation
+Implemented route /resume/final-report-pdf/<filename> using WeasyPrint to generate PDF from HTML report
+Connected backend to extract all relevant data (Name, Email, Phone, Education, Experience, Skills, Role Predictions) dynamically
+Ensured proper session handling and user-specific file paths for secure PDF generation
+Tested PDF download functionality across multiple resumes, confirming formatting, completeness, and accurate content display
