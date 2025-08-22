@@ -282,3 +282,30 @@ Tested PDF downloads with long resumes to confirm proper formatting and page bre
 Fixed backend crash when DOCX files had unusual table structures
 Corrected missing skill tags caused by lowercase vs uppercase mismatches
 Resolved session-related issue where extracted text persisted across different user accounts
+
+📅 21/08/2025 — Project Report Preparation & Documentation:
+
+📝 Report Drafting
+Collected and organized all project development logs, screenshots, and outputs for documentation.
+Structured the report into logical sections: Introduction, Background, Objectives, System Design, Implementation, Testing, Results, and Conclusion.
+Compiled step-by-step workflow from resume upload → parsing → extraction → classification → report generation.
+
+🎨 Formatting & Visual Enhancements
+Added flowcharts and diagrams to illustrate system architecture and workflow.
+Included tables summarizing classifier performance, extracted skills, and job role prediction accuracy.
+Formatted code snippets and sample outputs for clarity and readability.
+
+🛠️ Content Verification
+Reviewed all extracted screenshots, sample resumes, and classifier results to ensure accuracy.
+Checked consistency of naming conventions, UI screenshots, and classifier output representations.
+Validated that all key milestones and features are covered comprehensively in the report.
+
+📄 Final Touches
+Added references for libraries, frameworks, and tools used (Flask, PyMuPDF, python-docx, WeasyPrint, etc.).
+Prepared a table of contents with page numbers for easy navigation.
+Proofread the report for grammar, spelling, and technical accuracy.
+Ensured all figures, tables, and charts are properly labeled and referenced within the text.
+
+✅ Outcome
+Drafted a complete, professional, and well-structured project report ready for submission.
+Verified that report aligns with project objectives, system functionality, and testing results
